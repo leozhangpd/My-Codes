@@ -1,0 +1,233 @@
+html{
+    margin:0;
+    font-size: 62.5%;
+}
+body{
+    margin: 0;
+    padding:0;
+}
+header{
+    position: fixed;
+    left:0;
+    right:0;
+    top:0;
+    height:4rem;
+    background: #5fc0cd;
+}
+menu{
+    margin:-5px 0 13px 0;
+    color: #999999;
+    padding:7px 3% 0 11%;
+}
+main{
+    position: absolute;
+    top: 7.7rem;
+    left:0;
+    right:0;
+    margin-bottom: 60px;
+    overflow: hidden;
+    z-index: -1;/*原先下拉框弹出的部分老被main的内容所覆盖，所以只能设置这一属性变为负，站在header的后面，才解决不被覆盖的问题*/
+}
+footer{
+    position: fixed;
+    left:0;
+    right:0;
+    bottom:0;
+    height: 61px;
+    background: #f8fafb;
+    border-top:1px solid #e1e5e7;
+}
+.title{
+    position: relative;
+    padding: 0 3%;
+    text-align: center;
+    top:50%;
+    transform: translateY(-50%);
+    background:url("../images/sprite.png") no-repeat 97% 30%/ 29px;
+}
+.btn{
+    border-style: none;
+    border-radius: 6px;
+    padding: 6px 10px;
+    font-size:18px;
+}
+.btn-group > .btn.active{
+    z-index: 0;
+}
+.btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle) {/*:not()选择器意思是选择除括号内之外的所有元素添加css样式*/
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    outline: none;
+}
+.btn-group > .btn:last-child:not(:first-child){
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    outline: none;
+}
+.btn-default{
+    color: #5fc0cd;
+}
+.btn-default.active{
+    color: #ffffff;
+    background-color: #55a8b3;
+}
+.btn-default.active:hover{
+    color: #ffffff;
+    background: #55a8b3;
+}
+.btn-default.active.focus{
+    color:#ffffff;
+    background: #55a8b3;
+}
+.btn-bg{
+    background-color: #55a8b3;
+    border-radius: 6px;
+}
+.btn:active,.btn.active{
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.btn-three{
+    background: transparent;
+    padding: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    font-size: 1.4rem;
+}
+/*按钮宽度*/
+.dropdown{
+    display: inline-block;
+    width: 8rem;
+}
+
+.caret{
+    margin-left: 1.9rem !important;
+    color: #afbac0;
+}
+.left-border:before,.right-border:after{
+    display: inline-block;
+    content: ' ';
+    width:1px;
+    height: 33px;
+    background: linear-gradient(#fbfbfb, #dbdbdb, #fbfbfb);
+    z-index: 999;
+}
+.left-border:before{
+    position: fixed;
+    top: 52px;
+    right: 66%;
+}
+.right-border:after{
+    position: fixed;
+    right: 34%;
+    top:52px;
+}
+.menu-data{
+    position: relative;
+    top: 34%;
+    background-color: #ffffff;
+}
+.bottom-border{
+    border-bottom:1px solid #e1e5e7;
+}
+@media screen and (max-width:350px){
+    .se {
+        position: relative;
+        right: -15%;
+    }
+    .right-border:after{
+        position:fixed;
+        right:31%;
+        top:52px;
+    }
+    menu{
+        padding:0 1rem 0 8%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .se{
+        position: fixed;
+        right: 15%;
+    }
+    .caret{
+        margin-left:6.6rem!important;
+    }
+}
+.dropdown-menu{
+    min-width:98px;
+    z-index: 999;
+}
+
+.summary-space{
+    padding:1rem 3% 1rem 5%;
+    list-style: none;
+}
+.summary-date,.summary-place{
+    padding-left: 1.8rem;
+    color: #999999;
+}
+.summary-date{
+    background: url("../images/sprite.png") no-repeat 0 .2rem/29px;
+}
+.summary-place{
+    background: url("../images/sprite.png") no-repeat -7px 47%/29px;
+}
+.summary-dates{
+    padding-left: 1.8rem;
+    background: url("../images/sprite.png") no-repeat 100% 85%/29px;
+}
+.summary-dates>span:nth-child(2){
+    position: absolute;
+    right: 11%;
+    font-size: 15px;
+    color: #ff0000;
+}
+.summary-place,.summary-dates,.summary-date{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.footer-home{
+    margin: 0.8rem 0 0 22%;
+    height: 3rem;
+    background: url("../images/sprite.png") no-repeat 2px 69%/29px;
+}
+.footer-home>span{
+    position: relative;
+    top: 1.7rem;
+    left:-1px;
+    font-size: 1rem;
+    color: #5fc0cd;
+}
+.footer-edit{
+    display: inline-block;
+    position: fixed;
+    left: 50%;
+    bottom: 1px;
+    background: #5fc0cd url("../images/sprite.png") no-repeat 17px -27px/29px;
+    border-radius: 50%;
+    margin-left: -27px;
+    padding: 2.4rem;
+}
+.footer-person{
+    display: inline-block;
+    position: fixed;
+    right: 0;
+    bottom: 16px;
+    margin: 0.8rem 22% 0 0;
+    width: 3.1rem;
+    height: 3rem;
+    background: url("../images/sprite.png") no-repeat 6px -343px/29px;
+}
+.footer-person>span{
+    position: relative;
+    top: 1.9rem;
+    color: #999999;
+    font-size: 1rem;
+}
+footer>button{
+    outline: none;
+    border:none;
+}
