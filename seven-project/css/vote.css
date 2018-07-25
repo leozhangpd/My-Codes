@@ -110,14 +110,14 @@ min-height: 92%;
 }
 .main-content::-webkit-scrollbar{
     width: 1.5vw;
-    background-color: #4aa1c8;
 }
 .main-content::-webkit-scrollbar-track{
     background-color: #4aa1c8;
+    border-radius: 7px;
 }
 .main-content::-webkit-scrollbar-thumb{
-    border-radius: 7px;
     background: #fff;
+    border-radius: 7px;
 }
 
 footer{
