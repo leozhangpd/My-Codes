@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6046612d-8451-4174-8015-f2bd46bc8867" name="默认的" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/six-project/css/style.css" afterPath="$PROJECT_DIR$/six-project/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/six-project/index.html" afterPath="$PROJECT_DIR$/six-project/index.html" />
-    </list>
+    <list default="true" id="6046612d-8451-4174-8015-f2bd46bc8867" name="默认的" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -30,21 +26,21 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="home_page.html" pinned="false" current-in-tab="false">
+          <file leaf-file-name="home_page.html" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/seven-project/home_page.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-55">
-                  <caret line="13" column="4" lean-forward="true" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
+                <state relative-caret-position="143">
+                  <caret line="24" column="24" lean-forward="false" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="vote.html" pinned="false" current-in-tab="true">
+          <file leaf-file-name="vote.html" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/seven-project/vote.html">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="305">
-                  <caret line="30" column="64" lean-forward="true" selection-start-line="30" selection-start-column="64" selection-end-line="30" selection-end-column="64" />
+                  <caret line="30" column="64" lean-forward="false" selection-start-line="30" selection-start-column="64" selection-end-line="30" selection-end-column="64" />
                   <folding />
                 </state>
               </provider>
@@ -68,7 +64,7 @@
             <entry file="file://$PROJECT_DIR$/seven-project/css/home_page.css">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="-288">
-                  <caret line="5" column="21" lean-forward="true" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
+                  <caret line="5" column="21" lean-forward="false" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
                   <folding />
                 </state>
               </provider>
@@ -87,8 +83,8 @@
           <file leaf-file-name="vote.css" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/seven-project/css/vote.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="148">
-                  <caret line="142" column="45" lean-forward="true" selection-start-line="142" selection-start-column="45" selection-end-line="142" selection-end-column="45" />
+                <state relative-caret-position="202">
+                  <caret line="145" column="32" lean-forward="false" selection-start-line="145" selection-start-column="32" selection-end-line="145" selection-end-column="32" />
                   <folding />
                 </state>
               </provider>
@@ -142,8 +138,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-441" />
-    <option name="y" value="68" />
+    <option name="x" value="734" />
+    <option name="y" value="746" />
     <option name="width" value="1434" />
     <option name="height" value="968" />
   </component>
@@ -230,15 +226,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1532068588456</updated>
-      <workItem from="1532068591157" duration="123364000" />
+      <workItem from="1532068591157" duration="124582000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="123364000" />
+    <option name="totallyTimeSpent" value="124582000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-441" y="68" width="1434" height="968" extended-state="0" />
+    <frame x="734" y="746" width="1434" height="968" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26798308" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -339,15 +335,7 @@
     <entry file="file://$PROJECT_DIR$/seven-project/css/home_page.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-288">
-          <caret line="5" column="21" lean-forward="true" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/seven-project/home_page.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-55">
-          <caret line="13" column="4" lean-forward="true" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
+          <caret line="5" column="21" lean-forward="false" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
           <folding />
         </state>
       </provider>
@@ -368,14 +356,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/seven-project/css/vote.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="142" column="45" lean-forward="true" selection-start-line="142" selection-start-column="45" selection-end-line="142" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/seven-project/固定footer.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -387,7 +367,23 @@
     <entry file="file://$PROJECT_DIR$/seven-project/vote.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="305">
-          <caret line="30" column="64" lean-forward="true" selection-start-line="30" selection-start-column="64" selection-end-line="30" selection-end-column="64" />
+          <caret line="30" column="64" lean-forward="false" selection-start-line="30" selection-start-column="64" selection-end-line="30" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/seven-project/home_page.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="24" column="24" lean-forward="false" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/seven-project/css/vote.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="145" column="32" lean-forward="false" selection-start-line="145" selection-start-column="32" selection-end-line="145" selection-end-column="32" />
           <folding />
         </state>
       </provider>
