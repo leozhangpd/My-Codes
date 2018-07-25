@@ -4,93 +4,39 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-    <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css" type="text/css" >
-    <script src="js/jquery.js"></script>
-    <script src="js/bootstrap.js"></script>
 </head>
 <body>
 <header>
 <div class="title">
-    <div class="btn-group btn-bg" data-toggle="buttons">
-        <label class="btn btn-default active">
-            <input type="radio" checked>找雇主
-        </label>
-        <label  class="btn btn-default">
-            <input type="radio">找护工
-        </label>
-    </div>
+    <section >
+        <input id="tab-one" type="radio" name="grp" checked="checked">
+        <label for="tab-one"><span>找雇主</span></label>
+        <input id="tab-two" type="radio" name="grp">
+        <label for="tab-two"><span>找护工</span></label>
+    </section>
 </div>
-
-    <div class="menu-data bottom-border">
-        <menu>
-        <div class="dropdown">
-            <button type="button" class="btn dropdown-toggle btn-three" id="dropdownMenu1" data-toggle="dropdown">
-                所在地
-                <span class="caret"></span>
-            </button>
-
-            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-                <li>
-                    <a href="#">英国</a>
-                </li>
-                <li role="presentation">
-                    <a href="#">美国</a>
-                </li>
-
-                <li role="presentation">
-                    <a href="#">日本</a>
-                </li>
-                <li role="presentation">
-                    <a href="#">澳大利亚</a>
-                </li>
-            </ul>
-        </div>
-        <div class="dropdown" style="position: absolute;left: 47%;">
-            <button type="button" class="btn dropdown-toggle btn-three" id="dropdownMenu2" data-toggle="dropdown">
-                食宿
-                <span class="caret left-border"></span>
-            </button>
-
-            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu2">
-                <li>
-                    <a href="#">黄金海岸</a>
-                </li>
-                <li role="presentation">
-                    <a href="#">花都</a>
-                </li>
-
-                <li role="presentation">
-                    <a href="#">云梦居</a>
-                </li>
-                <li role="presentation">
-                    <a href="#">桃花溪</a>
-                </li>
-            </ul>
-        </div>
-        <div class="dropdown" style="position: fixed;right: 3%;">
-            <button type="button" class="btn dropdown-toggle btn-three" id="dropdownMenu3" data-toggle="dropdown">
-                <span class="se">病人情况</span>
-                <span class="caret right-border"></span>
-            </button>
-
-            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu3">
-                <li>
-                    <a href="#">老年痴呆</a>
-                </li>
-                <li role="presentation">
-                    <a href="#">腿脚不便</a>
-                </li>
-
-                <li role="presentation">
-                    <a href="#">患心脏病</a>
-                </li>
-                <li role="presentation">
-                    <a href="#">哮喘病</a>
-                </li>
-            </ul>
-        </div>
-    </menu>
+    <div class="nav bottom-border">
+        <select class="drop-down">
+            <option value="所在地">所在地</option>
+            <option value="上海">上海</option>
+            <option value="北京">北京</option>
+            <option value="广州">广州</option>
+        </select>
+        <select class="drop-down">
+            <option value="食宿">食宿</option>
+            <option value="包吃">包吃</option>
+            <option value="包住">包住</option>
+            <option value="不包吃">不包吃</option>
+            <option value="不包住">不包住</option>
+            <option value="包吃住">包吃住</option>
+            <option value="不包吃住">不包吃住</option>
+        </select>
+        <select class="drop-down">
+            <option value="病人情况">病人情况</option>
+            <option value="良好">良好</option>
+            <option value="一般">一般</option>
+        </select>
     </div>
 </header>
 <main>

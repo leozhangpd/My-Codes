@@ -1,3 +1,4 @@
+ul,li{list-style: none; margin: 0; padding: 0;}
 html{
     margin:0;
     font-size: 62.5%;
@@ -39,94 +40,83 @@ footer{
 }
 .title{
     position: relative;
-    padding: 0 3%;
-    text-align: center;
     top:50%;
+    height:100%;
+    padding: 0 3%;
+    font-size: 0;
+    text-align: center;
     transform: translateY(-50%);
-    background:url("../images/sprite.png") no-repeat 97% 30%/ 29px;
+    background:url("../images/sprite.png") no-repeat 97% -7.8rem/ 29px;
 }
-.btn{
-    border-style: none;
-    border-radius: 6px;
-    padding: 6px 10px;
-    font-size:18px;
-}
-.btn-group > .btn.active{
-    z-index: 0;
-}
-.btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle) {/*:not()选择器意思是选择除括号内之外的所有元素添加css样式*/
-    border-top-right-radius: 6px;
-    border-bottom-right-radius: 6px;
-    outline: none;
-}
-.btn-group > .btn:last-child:not(:first-child){
-    border-top-left-radius: 6px;
-    border-bottom-left-radius: 6px;
-    outline: none;
-}
-.btn-default{
-    color: #5fc0cd;
-}
-.btn-default.active{
-    color: #ffffff;
-    background-color: #55a8b3;
-}
-.btn-default.active:hover{
-    color: #ffffff;
-    background: #55a8b3;
-}
-.btn-default.active.focus{
-    color:#ffffff;
-    background: #55a8b3;
-}
-.btn-bg{
-    background-color: #55a8b3;
-    border-radius: 6px;
-}
-.btn:active,.btn.active{
-    -webkit-box-shadow: none;
-    box-shadow: none;
-}
-.btn-three{
-    background: transparent;
-    padding: 0;
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
-    border-radius: 0;
-    font-size: 1.4rem;
-}
-/*按钮宽度*/
-.dropdown{
+section{
     display: inline-block;
-    width: 8rem;
+    width: 147px;
+    height:37px;
+    background: #55a8b3;
+    font-size: 18px;
+    -webkit-text-size-adjust:none;
+    transform: translateY(14%);
+    border-radius: 6px;
 }
-
-.caret{
-    margin-left: 1.9rem !important;
+input[type="radio"]{
+    display: none;
+}
+input[type="radio"]:checked + label {
+    background: #55a8b3;
+    z-index: 1;
+    color: #fff;
+}
+label:first-of-type {
+    margin-left: 2px;
+}
+label {
+    display: inline-block;
+    margin-left: -5px;
+    width:49%;
+    height:100%;
+    background: #fff;
+    cursor: pointer;
+    border-radius: 6px;
+}
+label>span{
+    line-height:2.9rem;
+}
+/*下拉菜单*/
+.nav{
+    display: flex;
+    background: #fff;
+}
+select{
+    flex: 1;
+    padding: 1rem 1rem 1rem 1.8rem;
     color: #afbac0;
+    text-align:center;
+    text-align-last:center;
 }
-.left-border:before,.right-border:after{
+select,select>option{
+    border:none;
+    outline: none;
+}
+.nav>select:nth-child(3){
+    margin-right: 1rem;
+    padding: 1rem 0.8rem 1rem 0.9rem;
+}
+.nav:after,.nav:before{
     display: inline-block;
     content: ' ';
     width:1px;
-    height: 33px;
+    height: 36px;
     background: linear-gradient(#fbfbfb, #dbdbdb, #fbfbfb);
-    z-index: 999;
 }
-.left-border:before{
+.nav:before{
     position: fixed;
     top: 52px;
-    right: 66%;
+    right: 67%;
 }
-.right-border:after{
+.nav:after{
     position: fixed;
-    right: 34%;
+    right: 33%;
     top:52px;
-}
-.menu-data{
-    position: relative;
-    top: 34%;
-    background-color: #ffffff;
 }
 .bottom-border{
     border-bottom:1px solid #e1e5e7;
@@ -169,22 +159,29 @@ footer{
     color: #999999;
 }
 .summary-date{
+    display: inline-block;
     background: url("../images/sprite.png") no-repeat 0 .2rem/29px;
 }
 .summary-place{
     background: url("../images/sprite.png") no-repeat -7px 47%/29px;
 }
 .summary-dates{
+    display: flex;
     padding-left: 1.8rem;
     background: url("../images/sprite.png") no-repeat 100% 85%/29px;
 }
-.summary-dates>span:nth-child(2){
-    position: absolute;
-    right: 11%;
-    font-size: 15px;
-    color: #ff0000;
+.summary-dates>span{
+    flex: 1;
 }
-.summary-place,.summary-dates,.summary-date{
+.summary-dates>span:nth-child(2){
+    margin-left: -7.5rem;
+    padding-right: 3rem;
+    font-size: 16px;
+    color: #ff0000;
+    text-align: right;
+}
+.summary-place,.summary-dates,.summary-dates>span:first-child,.summary-date{
+    font-size: 15px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
