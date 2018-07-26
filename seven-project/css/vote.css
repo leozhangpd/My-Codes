@@ -6,6 +6,7 @@ html{
     background: #fff;
 }
 body{
+    position: relative;
     margin: 0 auto;
     padding:0;
     max-width: 720px;
@@ -39,7 +40,7 @@ header span{
     background: url("../images/vote-2.png") no-repeat 85% 69%/18%;
 }
 main{
-min-height: 92%;
+min-height: 88%;
 }
 .main-msg-1{
     padding:2.6% 0 3.6% 7%;
@@ -68,7 +69,7 @@ min-height: 92%;
 }
 .main-content{
     width: 99.5%;
-    height: 66vh;
+    height: 60vmax;
     margin-top: 3.6%;
     overflow: auto;
 }
@@ -121,7 +122,13 @@ min-height: 92%;
 }
 
 footer{
-    margin-top:-19%;
+    position: absolute;
+    height:15%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding-top: 5%;
+    background-color: #29bde0;
     text-align: center;
 }
 footer>button{
@@ -129,7 +136,7 @@ footer>button{
     padding: 3%;
     background: #fbb435;
     color: #fff;
-    font-size: 10vw;
+    font-size: 7vw;
 }
 @media screen and (min-width: 720px) {
     header>span{font-size: 36px;}
@@ -141,10 +148,11 @@ footer>button{
     .main-content-vote>li:nth-child(1){padding:24% 47px 0;font-size: 31px;}
     .main-content-vote>li:nth-child(2){font-size: 26px;}
     footer>button{width: 526px;font-size:50px;}
+    .main-content::-webkit-scrollbar{width:11px;}
 }
 @media screen and (max-width: 320px) {
     .main-msg-2{font-size: 12px}
 }
-@media screen and (min-width: 768px){
-    .main-content{height: 61vh;}
+@media screen and (min-width: 640px){
+    .main-content{height: 45rem;}
 }
