@@ -40,7 +40,7 @@ header span{
     background: url("../images/vote-2.png") no-repeat 85% 69%/18%;
 }
 main{
-min-height: 88%;
+    min-height: 88%;
 }
 .main-msg-1{
     padding:2.6% 0 3.6% 7%;
