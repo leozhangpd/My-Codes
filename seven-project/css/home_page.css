@@ -10,7 +10,7 @@ body{
     margin:0 auto;
     max-width: 720px;
     min-width: 320px;
-    background: #f0f0f0;
+    background: #f0f0f0!important;
 }
 header{
     background-color: #29bde0;
