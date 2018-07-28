@@ -1,6 +1,7 @@
 ul,li{display:block;list-style-type: none;margin: 0;padding: 0;}
 button{outline: none;border:none;}
 html,body{height:100%;}
+a:link,a:visited,a:hover,a:active {text-decoration:none;color: #fff;}
 html{
     font-size: calc(10px);
 }
@@ -133,15 +134,17 @@ footer{
 .footer-button{
     display: flex;
 }
-.footer-button>button{
-    flex: 1;
-    width: 45%;
+.footer-button>button ,.footer-button>a{
+    flex: 1;}
+.footer-button>button,.footer-button>a>button:nth-child(1){
+    width: 100%;
+    height: 100%;
     margin: 0 4%;
     padding: 3% 0;
     border-radius: 0.5rem;
     color: #fff;
 }
-.footer-button>button:nth-child(1){
+.footer-button>a>button:nth-child(1){
     background: #f37072;
 }
 .footer-button>button:nth-child(2){
@@ -158,4 +161,5 @@ footer{
     .main-list>li~li {font-size: 25px;letter-spacing: 2px;}
     .container-status>span:nth-child(1) {font-size: 42px;}
     .container-status>span:nth-child(2) {font-size: 35px;}
+    .footer-button>button,.footer-button>a>button:nth-child(1){font-size: 4rem;}
 }

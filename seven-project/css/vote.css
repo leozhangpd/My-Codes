@@ -1,5 +1,6 @@
 ul,li{display:inline-block;list-style-type: none;margin: 0;padding: 0;}
 button{outline: none;border:none;}
+a:link,a:visited,a:hover,a:active {text-decoration:none;color: #fff;}
 html,body{height:100%;}
 html{
     font-size: 62.5%;
@@ -42,6 +43,12 @@ header span{
 main{
     min-height: 88%;
 }
+.main-msg{
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 9;
+}
 .main-msg-1{
     padding:2.6% 0 3.6% 7%;
     background-color: rgba(255,255,255,0.7);
@@ -68,14 +75,18 @@ main{
     color: #fff;
 }
 .main-content{
+    position: absolute;
+    top: 17%;
+    left: 0;
+    right: 0;
+    bottom: 18%;
     width: 99.5%;
-    height: 60vmax;
     margin-top: 3.6%;
     overflow: auto;
 }
 .main-content-vote{
     position: relative;
-    margin: 3% 5.1% 8%;
+    margin: 3% 5% 8%;
     background-color: #f5c97b;
     border: 1vw solid #fff;
     text-align: center;
@@ -131,7 +142,7 @@ footer{
     background-color: #29bde0;
     text-align: center;
 }
-footer>button{
+footer>a>button{
     width: 73vw;
     padding: 3%;
     background: #fbb435;
@@ -147,7 +158,7 @@ footer>button{
     .main-content-vote{margin:3% 4.4% 8%;border-width: 7px;}
     .main-content-vote>li:nth-child(1){padding:24% 47px 0;font-size: 31px;}
     .main-content-vote>li:nth-child(2){font-size: 26px;}
-    footer>button{width: 526px;font-size:50px;}
+    footer>a>button{width: 526px;font-size:50px;}
     .main-content::-webkit-scrollbar{width:11px;}
 }
 @media screen and (max-width: 320px) {
