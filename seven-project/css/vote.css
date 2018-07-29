@@ -14,6 +14,7 @@ body{
     min-width: 320px;
     background-color: #29bde0;
 }
+.container{min-height: 100%}
 header{
     display: flex;
     background: #29bde0;
@@ -41,7 +42,6 @@ header span{
     background: url("../images/vote-2.png") no-repeat 85% 69%/18%;
 }
 main{
-    min-height: 88%;
 }
 .main-msg{
     position: absolute;
@@ -76,7 +76,7 @@ main{
 }
 .main-content{
     position: absolute;
-    top: 17%;
+    top: 18%;
     left: 0;
     right: 0;
     bottom: 18%;
@@ -134,10 +134,9 @@ main{
 
 footer{
     position: absolute;
-    height:15%;
     left: 0;
     right: 0;
-    bottom: 0;
+    bottom: 4%;
     padding-top: 5%;
     background-color: #29bde0;
     text-align: center;
@@ -154,11 +153,12 @@ footer>a>button{
     .main-msg-2{font-size: 29px;}
     .main-msg>span{font-size: 25px;}
     .main-msg-3{border-width: 18px 10px 0;}
-    .main-content{width:719px;}
+    .main-content{width:719px;top: 20rem;}
     .main-content-vote{margin:3% 4.4% 8%;border-width: 7px;}
     .main-content-vote>li:nth-child(1){padding:24% 47px 0;font-size: 31px;}
     .main-content-vote>li:nth-child(2){font-size: 26px;}
     footer>a>button{width: 526px;font-size:50px;}
+    footer{bottom: 0;padding-top: 0;}
     .main-content::-webkit-scrollbar{width:11px;}
 }
 @media screen and (max-width: 320px) {
@@ -166,4 +166,7 @@ footer>a>button{
 }
 @media screen and (min-width: 640px){
     .main-content{height: 45rem;}
+}
+@media screen and(min-width: 500px){
+
 }
