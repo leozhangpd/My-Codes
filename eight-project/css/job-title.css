@@ -60,13 +60,26 @@ h3{font-size: 1.6rem;font-weight: bold;}
     border-top: solid 1px #d8d8d8;
     border-bottom: solid 1px #edf1f2;
 }
-.option{margin:2.4rem 0;}
-.option-title{color: #999999;}
+.option{
+    position:relative;
+    margin:2.4rem 0;
+}
+.option>ul>li:nth-child(1){width: 5rem;}
+.option>ul{margin-left: 5.5rem;}
+.option-title{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    float: left;
+    color: #999999;
+}
 .option-content{
-    margin-left: 3rem;
+    width:7.4rem;
+}
+.option-content>span{
     padding:0 4px;
 }
-.option-content:active{
+.option-content>span:active{
     color: #ffffff;
     background-color: #29b078;
     cursor: pointer;
@@ -296,4 +309,7 @@ h3{font-size: 1.6rem;font-weight: bold;}
     .friend-link-2>a,
     .friend-link-3>a,
     .friend-link-4>a{font-size: 1.2rem;}
+}
+@media screen and (max-width: 524px) {
+    .option>ul>li:nth-child(1) {width: 7.4rem;}
 }
