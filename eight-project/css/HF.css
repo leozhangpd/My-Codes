@@ -100,11 +100,8 @@ h3{font-size: 1.6rem;font-weight: bold;}
 .nav-2>p:last-child{
     margin-bottom: 0;
 }
-.nav-3{
-    text-align: right;
-    text-align: -webkit-right;
-}
 .nav-3>h3{padding: 2rem 0 .7rem 0;}
+.nav-3>h3,.nav-3>div{width: 9.6rem;margin: 0 0 0 auto;}
 .nav-3>div{
     width: 9.2em;
     height: 9.2em;
@@ -136,7 +133,7 @@ h3{font-size: 1.6rem;font-weight: bold;}
     .bg-green>.container>nav>a>img{width: 60%;}
     .bg-green .navbar-nav>.nav-item{padding-left: 0;}
     .bg-green .navbar .nav-item{text-align: center;}
-    .nav-3{text-align: left;text-align: -webkit-left;}
+    .nav-3>h3,.nav-3>div{margin: 0 auto 0 0;}
 }
 @media screen and (min-width: 768px){
     .hidden-md {display: none;}

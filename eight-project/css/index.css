@@ -23,6 +23,9 @@ main h3{font-weight: bold;font-size: 1.8rem;}
 .main-content-1>div p{
     color: #999999;
 }
+.main-content-1>div div{
+    margin:auto;
+}
 .main-img-1-1{
     width: 4.3rem;
     height: 6.2rem;
@@ -222,5 +225,6 @@ main h3{font-weight: bold;font-size: 1.8rem;}
 }
 @media (min-width:992px) and (max-width: 1199px) {
     .summary>span:nth-child(3){margin-right: -8.5rem;}
+    .summary>span:first-child+li+li{margin-right: -8.5rem;}
     .main-content-2>li:nth-child(n+2) {justify-content: space-evenly;}
 }
