@@ -159,3 +159,9 @@
 @media screen and (max-width: 524px) {
     .option>ul>li:nth-child(1) {width: 7.4rem;}
 }
+@media (min-width: 992px) {
+    .col-lg-4 {
+        flex: 0 0 32.333333%;
+        max-width: 33.333333%;
+    }
+}
