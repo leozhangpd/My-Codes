@@ -117,7 +117,7 @@ main{margin-bottom: 5.4rem;}
 .main-content{padding-top: 4.8rem;}
 .main-content>ul>li{position: relative;text-align: center;margin: 0 0 1.5rem -.5rem}
 .main-content>ul>li:nth-of-type(1){margin-left:auto;z-index: 1;}
-.main-process>li>strong{
+.main-process-1{
     position: absolute;
     top: -.4rem;
     left: 0;
@@ -130,28 +130,34 @@ main{margin-bottom: 5.4rem;}
     border-radius: 50%;
     color: #ffffff;
     font-size: 1.6rem;
+    z-index: 2;
 }
-.main-process>li>span:nth-of-type(1){
+.main-process-2{
+    position: relative;
     content: "";
     width:16rem;
     height:.5rem;
     border-radius: 5px;
 }
-.main-process>li>span:nth-of-type(2){
+.main-process-3{
     display: block;
     margin-top:1.5rem;
     color: #ff7f02;
     font-weight: bold;
     font-size: 1.8rem;
 }
-.main-process>li>span:nth-of-type(1),
-.main-process>li>strong{
+.main-process-2,
+.main-process-1{
     display: inline-block;
     background: #ff7f02;
 }
-.main-process>li:not(:first-child)>span:nth-of-type(1),
-.main-process>li:not(:first-child)>strong{background: #cccccc;}
-.main-process>li:not(:first-child)>span:nth-of-type(2){color: #cccccc;}
+.main-process>li:hover .main-process-1,
+.main-process>li:hover .main-process-2{background: #ff7f02!important;}
+.main-process>li:hover .main-process-2{z-index: 1;}
+.main-process>li:hover .main-process-3{color: #ff7f02!important;}
+.main-process>li:not(:first-child)>.main-process-2,
+.main-process>li:not(:first-child)>.main-process-1{background: #cccccc;}
+.main-process>li:not(:first-child)>.main-process-3{color: #cccccc;}
 @media screen and (max-width: 767px){
     .main-content>ul>li {display: block;margin:0 0 1.5rem 0;width: 100%;}
     .main-process>li>span:nth-of-type(1) {width:80%;}
