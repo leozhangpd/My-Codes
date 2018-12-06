@@ -37,8 +37,8 @@ header {
 main {
   position: absolute;
   top: 4.9rem;
-  left: 0;
-  right: 0; }
+  right: 0;
+  left: 0; }
 
 .phone, .password {
   margin: 1rem 0 0 0; }
@@ -74,12 +74,22 @@ main {
   font-size: 1.7rem;
   line-height: 0.1rem;
   letter-spacing: 1rem;
-  border: 0; }
+  border: 0;
+  outline: none;
+  /*在元素边框边缘的外围绘制一条线,none是无*/
+  -webkit-transition: all 0.8s;
+  -moz-transition: all 0.8s;
+  -ms-transition: all 0.8s;
+  -o-transition: all 0.8s;
+  transition: all 0.8s; }
+  .button-login:hover {
+    background: #34c38d; }
 
 .bottom-right {
   position: absolute;
   top: 18rem;
-  right: 1rem; }
+  right: 1rem;
+  left: none; }
   .bottom-right a {
     text-decoration: none;
     color: #5bb7c3; }

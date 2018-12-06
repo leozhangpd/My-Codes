@@ -1,5 +1,11 @@
 @charset "utf-8";
 $color-white:white;
+@mixin absolute($top,$right,$left){
+  position: absolute;
+  top: $top;
+  right: $right;
+  left:$left;
+}
 html{font-size:62.5%;}
 body{
   margin: 0;
@@ -42,10 +48,7 @@ header{
   float: right;
 }
 main{
-  position: absolute;
-  top:4.9rem;
-  left:0;
-  right:0;
+  @include absolute(4.9rem,0,0);
 }
 .phone{margin: 1rem 0 0 0;}
 .password{@extend .phone;}
@@ -54,13 +57,16 @@ main{
   background-size: $size;
   background-repeat: $repeat;
 }
+@mixin border{
+  border: 0;
+  outline:none;/*在元素边框边缘的外围绘制一条线,none是无*/
+}
 .phone-input::placeholder{color: #e1e5e7;}
 .phone-input{
   box-sizing:border-box;
   padding:0 0 0 6rem;
   width: 100%;
-  border:0;
-  outline: none;/*在元素边框边缘的外围绘制一条线,none是无*/
+  @include border;
   line-height: 5rem;
   font-size: 1.4rem;
   @include background(url(../images/tell.png),5rem 5rem,no-repeat);
@@ -68,6 +74,13 @@ main{
 .password-input{
   @extend .phone-input;
   @include background(url(../images/password.png),5rem 5rem,no-repeat);
+}
+@mixin transition($transition){
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -ms-transition: $transition;
+  -o-transition: $transition;
+  transition: $transition;
 }
 .button-login{
   background: #5bb7c3;
@@ -79,15 +92,12 @@ main{
   font-size: 1.7rem;
   line-height: 0.1rem;
   letter-spacing: 1rem;
-  border: 0;
-}
-@mixin absolute($top,$right){
-  position: absolute;
-  top: $top;
-  right: $right;
+  @include border;
+  @include transition(all .8s);
+  &:hover{background: #34c38d;}
 }
 .bottom-right{
-  @include absolute(18rem,1rem);
+  @include absolute(18rem,1rem,none);
   a{
     text-decoration: none;
     color: #5bb7c3;
