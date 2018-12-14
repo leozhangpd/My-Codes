@@ -10,6 +10,10 @@ body, html {
   margin: 0;
   padding: 0; }
 
+a {
+  text-decoration: none;
+  outline: none; }
+
 header, .index > header {
   position: fixed;
   top: 0;
@@ -125,7 +129,7 @@ header, .index > header {
   margin-bottom: 6rem;
   overflow: hidden;
   z-index: -1; }
-  .assistant main .summary-space div:nth-of-type(3), .assistant main .summary-date, .assistant main .summary-dates, .assistant main .summary-dates span:first-child {
+  .assistant main .summary-space div:nth-of-type(3), .assistant main .summary-dates, .assistant main .summary-dates span:first-child, .assistant main .summary-date {
     font-size: 15px;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -135,16 +139,12 @@ header, .index > header {
     list-style: none; }
     .assistant main .summary-space div:nth-of-type(3) {
       background: url("../images/sprite.png") no-repeat -7px 47%/29px; }
-  .assistant main .summary-place, .assistant main .summary-date {
-    padding-left: 2rem;
-    color: #999999; }
-  .assistant main .summary-date {
-    display: inline-block;
-    background: url("../images/sprite.png") no-repeat 0 0.2rem/29px; }
   .assistant main .summary-dates {
     display: flex;
     padding-left: 1.8rem;
     background: url("../images/sprite.png") no-repeat 100% 85%/29px; }
+    .assistant main .summary-dates span:first-child {
+      color: #000; }
     .assistant main .summary-dates span {
       flex: 1; }
     .assistant main .summary-dates span:nth-child(2) {
@@ -153,6 +153,12 @@ header, .index > header {
       font-size: 16px;
       color: #ff0000;
       text-align: right; }
+  .assistant main .summary-place, .assistant main .summary-date {
+    padding-left: 2rem;
+    color: #999999; }
+  .assistant main .summary-date {
+    display: inline-block;
+    background: url("../images/sprite.png") no-repeat 0 0.2rem/29px; }
 
 .index main {
   position: absolute;
