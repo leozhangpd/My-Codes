@@ -1,8 +1,10 @@
 ul,li{list-style: none; margin: 0; padding: 0;}
+select::-ms-expand { display: none; }
 html{@extend body;
+  font-size: 62.5%;
   font-size: -webkit-calc(10px);
   font-size: -moz-calc(10px);
-  font-size: calc(10px)!important;
+  font-size: calc(10px);
 }
 body{margin: 0;padding: 0;}
 a{text-decoration: none;outline: none;}
@@ -127,20 +129,50 @@ header{
       text-align:center;
       text-align-last:center;
       background: #fff;
+      appearance:none;
+      -moz-appearance:none;
+      -webkit-appearance: none;
     }
     option{
       @extend %rim;
     }
     select:nth-child(3){padding: 0 .8rem 0 .9rem;}
     .select-border-left{
+      position: relative;
       display: inline-block;
       margin-top:.4rem;
       content: ' ';
       @include wh(.1rem,3.6rem);
       background: linear-gradient(#fbfbfb, #dbdbdb, #fbfbfb);
     }
-    .select-border-right{@extend .select-border-left;}
+    .select-border-right{
+      @extend .select-border-left;
+      position: relative;
+    }
   }
+}
+.arrow-bottom-1{
+  @include absolute(14px,unset,unset,-16px);
+  display: inline-block;
+  width: 0;
+  font-size: 0;
+  line-height: 0;
+  border-radius: 3px;
+  border-width: 6px;
+  border-color: #afbac0;
+  border-bottom-width: 0;
+  border-style: dashed;
+  border-top-style: solid;
+  border-left-color: transparent;
+  border-right-color: transparent;
+}
+
+.arrow-bottom-2{
+  @extend .arrow-bottom-1;
+}
+.arrow-bottom-3{
+  @extend .arrow-bottom-1;
+  @include absolute(66px,10px,unset,auto);
 }
 .assistant main{
   @include absolute(9rem,0,unset,0);
@@ -284,11 +316,11 @@ header{
   background: #f8fafb;
   @include border(top,1px solid #e1e5e7);
   .footer-home{
-    margin:.8rem 0 0 22%;
-    height: 3rem;
-    background: url("../images/sprite.png") no-repeat 2px 67%/29px;
+    margin:1rem 0 0 22%;
+    padding:0.8rem 2rem 2.5rem 0;
+    background: url("../images/sprite.png") no-repeat 2px 71.5%/29px;
     span{
-      @include relative(2.5rem,unset,unset,-1px);
+      @include relative(2.2rem,unset,unset,6px);
       font-size: 1rem;
       color: $cyan;
     }
@@ -303,14 +335,14 @@ header{
   }
   .footer-person{
     display: inline-block;
-    @include fixed(unset,0,16px,unset);
-    margin: 0.8rem 22% 0 0;
-    width: 3.5rem;
-    height: 3.6rem;
-    background: url("../images/sprite.png") no-repeat 6px -343px/29px;
+    @include fixed(unset,0,unset,unset);
+    margin: 1rem 22% 0 0 ;
+    padding:0.8rem 2rem 2.5rem 0;
+    background: url("../images/sprite.png") no-repeat 6px -345px/29px;
     span{
       position: relative;
-      top: 2rem;
+      top: 2.2rem;
+      left: 8px;
       color: $gray;
       font-size: 1rem;
     }

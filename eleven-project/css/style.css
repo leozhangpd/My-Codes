@@ -3,10 +3,14 @@ ul, li {
   margin: 0;
   padding: 0; }
 
+select::-ms-expand {
+  display: none; }
+
 html {
+  font-size: 62.5%;
   font-size: -webkit-calc(10px);
   font-size: -moz-calc(10px);
-  font-size: calc(10px) !important; }
+  font-size: calc(10px); }
 
 body, html {
   margin: 0;
@@ -112,16 +116,48 @@ header, .index > header {
     color: #afbac0;
     text-align: center;
     text-align-last: center;
-    background: #fff; }
+    background: #fff;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none; }
   .assistant > header .nav select:nth-child(3) {
     padding: 0 .8rem 0 .9rem; }
   .assistant > header .nav .select-border-left, .assistant > header .nav .select-border-right {
+    position: relative;
     display: inline-block;
     margin-top: .4rem;
     content: ' ';
     width: 0.1rem;
     height: 3.6rem;
     background: linear-gradient(#fbfbfb, #dbdbdb, #fbfbfb); }
+  .assistant > header .nav .select-border-right {
+    position: relative; }
+
+.arrow-bottom-1, .arrow-bottom-2, .arrow-bottom-3 {
+  position: absolute;
+  top: 14px;
+  right: unset;
+  bottom: unset;
+  left: -16px;
+  display: inline-block;
+  width: 0;
+  font-size: 0;
+  line-height: 0;
+  border-radius: 3px;
+  border-width: 6px;
+  border-color: #afbac0;
+  border-bottom-width: 0;
+  border-style: dashed;
+  border-top-style: solid;
+  border-left-color: transparent;
+  border-right-color: transparent; }
+
+.arrow-bottom-3 {
+  position: absolute;
+  top: 66px;
+  right: 10px;
+  bottom: unset;
+  left: auto; }
 
 .assistant main {
   position: absolute;
@@ -273,15 +309,15 @@ header, .index > header {
   -moz-border-top: 1px solid #e1e5e7;
   border-top: 1px solid #e1e5e7; }
   .assistant footer .footer-home {
-    margin: .8rem 0 0 22%;
-    height: 3rem;
-    background: url("../images/sprite.png") no-repeat 2px 67%/29px; }
+    margin: 1rem 0 0 22%;
+    padding: 0.8rem 2rem 2.5rem 0;
+    background: url("../images/sprite.png") no-repeat 2px 71.5%/29px; }
     .assistant footer .footer-home span {
       position: relative;
-      top: 2.5rem;
+      top: 2.2rem;
       right: unset;
       bottom: unset;
-      left: -1px;
+      left: 6px;
       font-size: 1rem;
       color: #5fc0cd; }
   .assistant footer .footer-edit {
@@ -302,15 +338,15 @@ header, .index > header {
     position: fixed;
     top: unset;
     right: 0;
-    bottom: 16px;
+    bottom: unset;
     left: unset;
-    margin: 0.8rem 22% 0 0;
-    width: 3.5rem;
-    height: 3.6rem;
-    background: url("../images/sprite.png") no-repeat 6px -343px/29px; }
+    margin: 1rem 22% 0 0;
+    padding: 0.8rem 2rem 2.5rem 0;
+    background: url("../images/sprite.png") no-repeat 6px -345px/29px; }
     .assistant footer .footer-person span {
       position: relative;
-      top: 2rem;
+      top: 2.2rem;
+      left: 8px;
       color: #999999;
       font-size: 1rem; }
 
