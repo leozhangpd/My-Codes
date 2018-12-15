@@ -6,7 +6,7 @@ ul, li {
 html {
   font-size: -webkit-calc(10px);
   font-size: -moz-calc(10px);
-  font-size: calc(10px); }
+  font-size: calc(10px) !important; }
 
 body, html {
   margin: 0;
@@ -67,7 +67,7 @@ header, .index > header {
   -ms-transform: translateY(-50%);
   -o-transform: translateY(-50%);
   transform: translateY(-50%);
-  background: url("../images/sprite.png") no-repeat 97% -9.4rem/29px; }
+  background: url("../images/sprite.png") no-repeat 97% -94px/29px; }
   .assistant > header .title section {
     display: inline-block;
     width: 14.7rem;
@@ -144,7 +144,7 @@ header, .index > header {
       background: url("../images/sprite.png") no-repeat -7px 47%/29px; }
   .assistant main .summary-dates {
     display: flex;
-    padding-left: 1.8rem;
+    padding-left: 23px;
     background: url("../images/sprite.png") no-repeat 100% 85%/29px; }
     .assistant main .summary-dates span:first-child {
       color: #000; }
@@ -157,7 +157,7 @@ header, .index > header {
       color: #ff0000;
       text-align: right; }
   .assistant main .summary-place, .assistant main .summary-date {
-    padding-left: 2rem;
+    padding-left: 23px;
     color: #999999; }
   .assistant main .summary-date {
     display: inline-block;

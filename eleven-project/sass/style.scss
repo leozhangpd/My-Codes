@@ -2,7 +2,7 @@ ul,li{list-style: none; margin: 0; padding: 0;}
 html{@extend body;
   font-size: -webkit-calc(10px);
   font-size: -moz-calc(10px);
-  font-size: calc(10px);
+  font-size: calc(10px)!important;
 }
 body{margin: 0;padding: 0;}
 a{text-decoration: none;outline: none;}
@@ -86,7 +86,7 @@ header{
     font-size: 0;
     text-align: center;
     @include transform(-50%);
-    background:url("../images/sprite.png") no-repeat 97% -9.4rem/ 29px;
+    background:url("../images/sprite.png") no-repeat 97% -94px/ 29px;
     $gray1: #55a8b3;
     section{
       display: inline-block;
@@ -163,7 +163,7 @@ header{
   .summary-dates{
     @extend %summary-public;
     display: flex;
-    padding-left: 1.8rem;
+    padding-left: 23px;
     background: url("../images/sprite.png") no-repeat 100% 85%/29px;
     span:first-child{@extend %summary-public;
       color: #000;}
@@ -177,7 +177,7 @@ header{
     }
   }
   .summary-place{
-    padding-left: 2rem;
+    padding-left: 23px;
     color: #999999;
   }
   .summary-date{
