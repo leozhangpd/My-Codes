@@ -4,6 +4,8 @@ ul, li {
   padding: 0; }
 
 html {
+  font-size: -webkit-calc(10px);
+  font-size: -moz-calc(10px);
   font-size: calc(10px); }
 
 body, html {
@@ -109,7 +111,8 @@ header, .index > header {
     padding: 1.2rem 1rem 1.2rem 1.8rem;
     color: #afbac0;
     text-align: center;
-    text-align-last: center; }
+    text-align-last: center;
+    background: #fff; }
   .assistant > header .nav select:nth-child(3) {
     padding: 0 .8rem 0 .9rem; }
   .assistant > header .nav .select-border-left, .assistant > header .nav .select-border-right {

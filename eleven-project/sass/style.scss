@@ -1,5 +1,9 @@
 ul,li{list-style: none; margin: 0; padding: 0;}
-html{@extend body;font-size: calc(10px);}
+html{@extend body;
+  font-size: -webkit-calc(10px);
+  font-size: -moz-calc(10px);
+  font-size: calc(10px);
+}
 body{margin: 0;padding: 0;}
 a{text-decoration: none;outline: none;}
 $cyan: #5fc0cd;
@@ -122,6 +126,7 @@ header{
       color: #afbac0;
       text-align:center;
       text-align-last:center;
+      background: #fff;
     }
     option{
       @extend %rim;
