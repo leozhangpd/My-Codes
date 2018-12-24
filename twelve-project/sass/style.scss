@@ -1,0 +1,352 @@
+ul{list-style-type: none;margin: 0;padding: 0;}
+button{outline: none;border:none;}
+%color-white{color: #fff;}
+%background-white{background-color: #fff!important;}
+a:link,a:visited,a:hover,a:active {text-decoration:none;@extend %color-white;}
+%width{width: 100%;}
+%height{height: 100%;}
+html{@extend %height;font-size: 62.5%;@extend %background-white;}
+body{
+  position: relative;
+  @extend %height;
+  margin:0 auto;
+  max-width: 720px;
+  min-width: 320px;
+}
+%background-blue{background: #29bde0;}
+%flex{display: flex;}
+%inline-block{display: inline-block;}
+%text-align{text-align: center;}
+%relative{position: relative;}
+%flex-1{flex: 1;}
+@mixin absolute($top,$right,$bottom,$left){
+  position: absolute;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+@mixin border($side,$value...){
+  -webkit-border-#{$side}: $value;
+  -moz-border-#{$side}: $value;
+  border-#{$side}: $value;
+}
+@mixin borders($width,$style,$color){
+  border-width: $width;
+  border-style: $style;
+  border-color: $color;
+}
+%padding-0 {padding: 0;}
+%height-32px{height: 50px;}
+.result-body {@extend %padding-0;}
+.vote-body {
+  @extend %padding-0;
+  @extend %background-blue;
+}
+.home-page-body {
+  padding-bottom: 4%;
+  height: 100vh;
+  background: #f0f0f0;
+}
+.result-body {
+  .container {
+    @include absolute(0, 0, 4%, 0);
+    overflow: auto;
+  }
+  header {
+    @extend %flex;
+    @extend %height-32px;
+    @extend %background-blue;
+    @include border(bottom, 1px solid #74d4eb);
+  }
+}
+.vote-body {
+  .container {
+    min-height: 100%;
+  }
+  header {
+    @extend %flex;
+    @extend %background-blue;
+  }
+}
+.home-page-body {
+  header {
+    @extend %background-blue;
+  }
+  .header__sidebar-button {
+    margin: 7% 0 1% 7%;
+    padding-top: 6%;
+    width: 6%;
+    background: url("../images/home_page-1.png") no-repeat 0 0/90%;
+  }
+}
+%font__family {font-family: serif;}
+%header__content {
+  @extend %inline-block;
+  @extend %flex-1;
+  width: 33%;
+  @extend %font__family;
+  font-size: 2rem;
+  @extend %color-white;
+  @extend %text-align;
+  line-height: 3;
+}
+.result-body .header__content {@extend %header__content;font-size: 2rem;}
+.vote-body .header__content {@extend %header__content;font-size: 5vw;}
+.header__left,.header__right {
+  @extend %inline-block;
+  @extend %flex-1;
+  width:33%;
+  margin-top: -8px;
+}
+.result-body {
+  .header__left {
+    background: url("../images/result-1.png") no-repeat 14% 68%/21%;
+  }
+  .header__right {
+    background: url("../images/result-2.png") no-repeat 85% 69%/19%;
+  }
+}
+.vote-body {
+  .header__left {
+    background: url("../images/vote-1.png") no-repeat 14% 68%/18%;
+  }
+  .header__right {
+    background: url("../images/vote-2.png") no-repeat 85% 69%/18%;
+  }
+}
+
+.home-page-body {
+  main {
+    margin: 0 6%;
+  }
+  %main__review-main__content {
+    @extend %background-white;
+    margin-top: 4%;
+    @extend %text-align;
+    border: 1px double #cecece;
+    letter-spacing: 3px;
+  }
+  .main__review {
+    padding: 4% 0;
+    background: url("../images/home_page-2.png") no-repeat 97% 50%/5%;
+    @extend %main__review-main__content;
+  }
+  .review__content {
+    font-size: 18px;
+    color: #9a9a9a;
+  }
+  .main__content {
+    @extend %relative;
+    @extend %main__review-main__content;
+  }
+  .content__title {
+    padding: 3% 0;
+    font-size: 19px;
+    color: #fbb435;
+    border-bottom: .2rem solid #fdd793;
+  }
+  %background-blues {
+    background: #69d1e9;
+  }
+  %content__option-margin {
+    margin: 4% 8% 0 8%;
+  }
+  .option__btn {
+    padding: 6% 0;
+    @extend %content__option-margin;
+    @extend %background-blues;
+    font-size: 18px;
+  }
+  .option__btn--arrows {
+    @extend %inline-block;
+    content: '';
+    position: absolute;
+    right: 1%;
+    @include borders(15px 0 15px 15px, solid, transparent transparent transparent #fbb435);
+  }
+  .option__hint {
+    color: #787878;
+    @extend %content__option-margin;
+  }
+  .page__dot {
+    @extend %inline-block;
+    margin: 2% 0 2% -1px;
+    padding-top: 2.5%;
+    width: 2.5%;
+    @extend %background-blues;
+    @include border(radius, 50%);
+  }
+}
+.result-body {
+  main {
+    @extend %background-blue;
+  }
+  .main__logo {
+    @extend %text-align;
+  }
+  .logo__img {
+    padding: 3% 0 0;
+    width: 56%;
+  }
+  .main__msg {
+    padding: 2% 12.2% 3%;
+    letter-spacing: .1rem;
+    text-align: justify;
+  }
+  .msg__title{
+    color: #ffc865;
+    font-size: 1.45rem;
+    padding-bottom:10%;
+  }
+  .msg__content{
+    display: flex;
+    font-size: 1.4rem;
+    @extend %color-white;
+    line-height: 130%;
+  }
+  .content__the-third-line{@extend %flex-1;}
+  .content__the-fourth-line{@extend %flex-1;}
+  .content__the-fourth-line--1{letter-spacing: .2rem;}
+  .content__the-fourth-line--2{padding-right: 33.5%;}
+  .content__list{
+    padding:1% 12% 5%;
+    @extend %background-white;
+    @include border(bottom,1px solid #a6a6a6);
+  }
+  .list__content{@extend %flex;}
+  .content__item{
+    @extend %flex-1;
+    padding-bottom:1.5%;
+    align-content: center;
+  }
+  .content__item--left{font-size: 1.6rem;color: #000;}
+  %text-align-right{text-align: right;}
+  .content__item--right{
+    padding-right:8%;
+    font-size: 1.1rem;
+    color: #cfcfcf;
+    @extend %text-align-right;
+    line-height: 265%;
+  }
+  .list__content--text{
+    font-size: 1.26rem;
+    color:#a6a6a6;
+    letter-spacing: .1rem;
+  }
+  .container__status{@extend %flex;margin-bottom: 14%;}
+  .status__content{flex: 1;color:#29bde0;}
+  .status__content--left{padding: 1% 0 0 7%;font-size: 2.1rem;}
+  .status__content--right{
+    padding: 3% 8% 0 0;
+    font-size: 1.7rem;
+    @extend %text-align-right;
+  }
+  footer{
+    %width-90{width: 90%;}
+    @include absolute(unset,0,0,0);
+    padding:4% 0;
+    background-color: rgba(52,190,222,0.45);
+    .footer__button{display: flex;}
+    .button__left,.button__right{
+      @extend %flex-1;
+      &>button{
+        @extend %width-90;
+        @extend %height;
+        margin: 0 4%;
+        padding:6% 0;
+        @extend %text-align;
+        border-radius: .5rem;
+        @extend %color-white;
+      }
+    }
+    .button__left>button{background: #f37072;}
+    .button__right>button{background: #f8b445;}
+  }
+}
+.vote-body{
+  .main__msg{@include absolute(unset,0,unset,0);z-index: 9;}
+  .msg__title{padding: 2.6% 0 3.6% 7%;background: rgba(255,255,255,0.7);}
+  .title__text{font-size: 4vw;}
+  .title__img{margin: 0 0 -2.1% 39%;width: 7.5%;}
+  .msg-arrow{
+    width: 0;
+    height: 0;
+    margin-left: 10%;
+    margin-bottom: 1%;
+    @include borders(2.2vw 1.2vw 0,solid,#b9e9f5 transparent transparent);
+  }
+  .msg__tail{
+    padding-left:11%;
+    font-size: 3.5vw;
+    @extend %color-white;
+  }
+  .main__content{
+    @include absolute(32vw,0,18%,0);
+    width:99.5%;
+    margin-top: 3.6%;
+    overflow: auto;
+    &::-webkit-scrollbar-track{
+      background-color: #4aa1c8;
+      border-radius: 7px;
+    }
+    &::-webkit-scrollbar-thumb{
+      @extend %background-white;
+      border-radius: 7px;
+    }
+  }
+  .content__vote{
+    @extend %inline-block;
+    position: relative;
+    margin:3% 5% 8%;
+    background-color: #f5c97b;
+    border: 1vw solid #fff;
+    @extend %text-align;
+    &>li{display: block;}
+    &:hover{
+      .vote__msg--option{display: flex;}
+    }
+    .vote__msg--option{
+      display: none;
+      @include absolute(122%,unset,unset,-7%);
+      width:115%;
+    }
+  }
+  .vote__msg--first-line{padding: 24% 5.6vw 0;font-size: 4.4vw;}
+  .vote__msg--second-line{
+    margin-top:19%;
+    background-color: #83b09a;
+    font-size: 3.6vw;
+    @extend %color-white;
+  }
+  .msg--icon__icon{flex: 1;}
+  .msg--icon__icon img{width: 84%;}
+  footer{
+    @include absolute(unset,0,4%,0);
+    background-color: #29bde0;
+    @extend %text-align;
+  }
+  .button__center{
+    width: 73vw;
+    padding: 3%;
+    background: #fbb435;
+    @extend %color-white;
+    font-size: 7vw;
+  }
+  @media screen and (min-width: 720px) {
+    .header__content{font-size: 36px;}
+    .title__text{font-size: 29px;}
+    .msg__tail{font-size: 25px;}
+    .msg-arrow{border-width: 18px 10px 0;}
+    .main__content{width:719px;top: 20rem;}
+    .content__vote{margin:3% 4.4% 8%;border-width: 7px;}
+    .vote__msg--first-line{padding:24% 47px 0;font-size: 31px;}
+    .vote__msg--second-line{font-size: 26px;}
+    .button__center{width: 526px;font-size:50px;}
+    footer{padding-top: 0;}
+    .main__content::-webkit-scrollbar{width:11px;}
+  }
+  @media screen and (max-width: 320px) {
+    .title__text{font-size: 12px}
+  }
+}
