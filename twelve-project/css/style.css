@@ -1,3 +1,4 @@
+@charset "UTF-8";
 ul {
   list-style-type: none;
   margin: 0;
@@ -7,56 +8,81 @@ button {
   outline: none;
   border: none; }
 
-a:link, a:visited, a:hover, a:active, .result-body .header__content, .vote-body .header__content, .result-body .msg__content, .result-body footer .button__left > button, .result-body footer .button__right > button, .vote-body .msg__tail, .vote-body .vote__msg--second-line, .vote-body .button__center {
+a:link, a:visited, a:hover, a:active, .result-body .header__content, .vote-body .header__content, .result-body .msg__content, .vote-body .msg__tail, .vote-body .vote__msg--second-line, .result-body footer .button__left > button, .result-body footer .button__right > button, .vote-body .button__center {
   color: #fff; }
 
-html, .home-page-body .main__review, .home-page-body .main__content, .result-body .content__list, .vote-body .main__content::-webkit-scrollbar-thumb {
+html, .home-page-body .side-nav, .home-page-body .main__review, .home-page-body .main__content, .result-body .content__list, .vote-body .main__content::-webkit-scrollbar-thumb {
   background-color: #fff !important; }
 
 a:link, a:visited, a:hover, a:active {
   text-decoration: none; }
 
-html, body, .result-body footer .button__left > button, .result-body footer .button__right > button {
+.home-page-body .container {
+  width: 100%; }
+
+html, body, .home-page-body .side-nav, .home-page-body .container, .result-body footer .button__left > button, .result-body footer .button__right > button {
   height: 100%; }
+
+html, .home-page-body {
+  overflow-x: hidden; }
 
 html {
   font-size: 62.5%; }
 
+/*html全局*/
 body {
+  /*body全局*/
   position: relative;
   margin: 0 auto;
   max-width: 720px;
   min-width: 320px; }
 
+/*!用了百分比占位符来提取重复部分的样式进行组合*/
 .vote-body, .result-body header, .vote-body header, .home-page-body header, .result-body main {
   background: #29bde0; }
 
+/*定义背景为蓝色*/
 .result-body header, .vote-body header, .result-body .list__content, .result-body .container__status {
   display: flex; }
 
-.result-body .header__content, .vote-body .header__content, .header__left, .header__right, .home-page-body .option__btn--arrows, .home-page-body .page__dot, .vote-body .content__vote {
+/*定义元素类型为flex*/
+.home-page-body .side-nav, .home-page-body .container, .home-page-body .header__sidebar-button, .result-body .header__content, .vote-body .header__content, .header__left, .header__right, .home-page-body .option__btn--arrows, .home-page-body .page__dot, .vote-body .content__vote {
   display: inline-block; }
 
-.result-body .header__content, .vote-body .header__content, .home-page-body .main__review, .home-page-body .main__content, .result-body .main__logo, .result-body footer .button__left > button, .result-body footer .button__right > button, .vote-body .content__vote, .vote-body footer {
+/*定义元素类型为内联块*/
+.result-body .header__content, .vote-body .header__content, .home-page-body .main__review, .home-page-body .main__content, .result-body .main__logo, .vote-body .content__vote, .result-body footer .button__left > button, .result-body footer .button__right > button, .vote-body footer {
   text-align: center; }
 
+/*定义居中*/
 .home-page-body .main__content {
   position: relative; }
 
+/*定义相对定位*/
 .result-body .header__content, .vote-body .header__content, .header__left, .header__right, .result-body .content__the-third-line, .result-body .content__the-fourth-line, .result-body .content__item, .result-body footer .button__left, .result-body footer .button__right {
   flex: 1; }
 
+/*定义flex为1*/
+/*绝对定位混合器*/
+/*边框混合器*/
+/*多种混合器*/
 .result-body, .vote-body {
   padding: 0; }
 
+/*定义内边距为*/
 .result-body header {
   height: 50px; }
 
+/*三个设置根元素body的类*/
+/*result页面body的属性，内边距为0*/
+.vote-body {
+  /*vote页面body的属性，内边距为0，背景色为蓝色*/ }
+
 .home-page-body {
-  padding-bottom: 4%;
+  /*home-page页面body的属性，高为100vh，背景色为白色，溢出隐藏*/
   height: 100vh;
   background: #f0f0f0; }
 
+/*三个页面的父元素container和元素header的部分及home-page的侧边栏部分*/
 .result-body .container {
   position: absolute;
   top: 0;
@@ -72,11 +98,52 @@ body {
 .vote-body .container {
   min-height: 100%; }
 
-.home-page-body .header__sidebar-button {
-  margin: 7% 0 1% 7%;
-  padding-top: 6%;
-  width: 6%;
-  background: url("../images/home_page-1.png") no-repeat 0 0/90%; }
+.home-page-body {
+  /*侧边栏*/ }
+  .home-page-body #side {
+    display: none; }
+  .home-page-body .side-nav {
+    position: absolute;
+    left: -75%;
+    width: 75%;
+    transition: all .8s; }
+    .home-page-body .side-nav .side-nav__menu {
+      padding: 10px 35px 10px 65px;
+      font-size: 2rem;
+      border-bottom: 1px solid #eaeaea;
+      color: #74d4eb;
+      transition: all .3s; }
+      .home-page-body .side-nav .side-nav__menu:active {
+        background-color: #e6e6e6; }
+      .home-page-body .side-nav .side-nav__menu .side-nav__arrow {
+        padding-top: 4px;
+        padding-left: 61%;
+        float: right; }
+    .home-page-body .side-nav .side-nav__menu--notice {
+      background: url("../images/side-nav__notice.png") no-repeat 20px 9px/27px; }
+    .home-page-body .side-nav .side-nav__menu--set {
+      background: url("../images/side-nav__set.png") no-repeat 20px 9px/27px; }
+    .home-page-body .side-nav .side-nav__menu--help {
+      background: url("../images/side-nav__help.png") no-repeat 20px 9px/27px; }
+    .home-page-body .side-nav .side-nav__menu--set {
+      background: url("../images/side-nav__set.png") no-repeat 20px 9px/27px; }
+    .home-page-body .side-nav .side-nav__menu--about {
+      background: url("../images/side-nav__about.png") no-repeat 20px 9px/27px; }
+  .home-page-body #side:checked ~ ul {
+    left: 0; }
+  .home-page-body .container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: all .8s;
+    box-shadow: -3px 0px 6px #e6e6e6; }
+  .home-page-body #side:checked ~ div {
+    left: 75%; }
+  .home-page-body .header__sidebar-button {
+    margin: 7% 0 1% 7%;
+    padding-top: 6%;
+    width: 6%;
+    background: url("../images/home_page-1.png") no-repeat 0 0/90%; }
 
 .result-body .header__content, .vote-body .header__content {
   font-family: serif; }
@@ -106,6 +173,7 @@ body {
 .vote-body .header__right {
   background: url("../images/vote-2.png") no-repeat 85% 69%/18%; }
 
+/*三个页面的main主体部分*/
 .home-page-body main {
   margin: 0 6%; }
 .home-page-body .main__review, .home-page-body .main__content {
@@ -199,26 +267,6 @@ body {
 .result-body .status__content--right {
   padding: 3% 8% 0 0;
   font-size: 1.7rem; }
-.result-body footer {
-  position: absolute;
-  top: unset;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  padding: 4% 0;
-  background-color: rgba(52, 190, 222, 0.45); }
-  .result-body footer .button__left > button, .result-body footer .button__right > button {
-    width: 90%; }
-  .result-body footer .footer__button {
-    display: flex; }
-  .result-body footer .button__left > button, .result-body footer .button__right > button {
-    margin: 0 4%;
-    padding: 6% 0;
-    border-radius: .5rem; }
-  .result-body footer .button__left > button {
-    background: #f37072; }
-  .result-body footer .button__right > button {
-    background: #f8b445; }
 
 .vote-body .main__msg {
   position: absolute;
@@ -288,6 +336,29 @@ body {
   flex: 1; }
 .vote-body .msg--icon__icon img {
   width: 84%; }
+
+/*两个页面footer部分，home-page页面没有footer部分*/
+.result-body footer {
+  position: absolute;
+  top: unset;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 4% 0;
+  background-color: rgba(52, 190, 222, 0.45); }
+  .result-body footer .button__left > button, .result-body footer .button__right > button {
+    width: 90%; }
+  .result-body footer .footer__button {
+    display: flex; }
+  .result-body footer .button__left > button, .result-body footer .button__right > button {
+    margin: 0 4%;
+    padding: 6% 0;
+    border-radius: .5rem; }
+  .result-body footer .button__left > button {
+    background: #f37072; }
+  .result-body footer .button__right > button {
+    background: #f8b445; }
+
 .vote-body footer {
   position: absolute;
   top: unset;

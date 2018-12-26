@@ -1,3 +1,4 @@
+@charset "utf-8";
 ul{list-style-type: none;margin: 0;padding: 0;}
 button{outline: none;border:none;}
 %color-white{color: #fff;}
@@ -5,20 +6,23 @@ button{outline: none;border:none;}
 a:link,a:visited,a:hover,a:active {text-decoration:none;@extend %color-white;}
 %width{width: 100%;}
 %height{height: 100%;}
-html{@extend %height;font-size: 62.5%;@extend %background-white;}
-body{
+%overflow-hidden{overflow-x: hidden;}
+html{@extend %height;font-size: 62.5%;@extend %background-white;@extend %overflow-hidden;}/*html全局*/
+body{/*body全局*/
   position: relative;
   @extend %height;
   margin:0 auto;
   max-width: 720px;
   min-width: 320px;
 }
-%background-blue{background: #29bde0;}
-%flex{display: flex;}
-%inline-block{display: inline-block;}
-%text-align{text-align: center;}
-%relative{position: relative;}
-%flex-1{flex: 1;}
+/*!用了百分比占位符来提取重复部分的样式进行组合*/
+%background-blue{background: #29bde0;}/*定义背景为蓝色*/
+%flex{display: flex;}/*定义元素类型为flex*/
+%inline-block{display: inline-block;}/*定义元素类型为内联块*/
+%text-align{text-align: center;}/*定义居中*/
+%relative{position: relative;}/*定义相对定位*/
+%flex-1{flex: 1;}/*定义flex为1*/
+/*绝对定位混合器*/
 @mixin absolute($top,$right,$bottom,$left){
   position: absolute;
   top: $top;
@@ -26,28 +30,32 @@ body{
   bottom: $bottom;
   left: $left;
 }
+/*边框混合器*/
 @mixin border($side,$value...){
   -webkit-border-#{$side}: $value;
   -moz-border-#{$side}: $value;
   border-#{$side}: $value;
 }
+/*多种混合器*/
 @mixin borders($width,$style,$color){
   border-width: $width;
   border-style: $style;
   border-color: $color;
 }
-%padding-0 {padding: 0;}
+%padding-0 {padding: 0;}/*定义内边距为*/
 %height-32px{height: 50px;}
-.result-body {@extend %padding-0;}
-.vote-body {
+/*三个设置根元素body的类*/
+.result-body {@extend %padding-0;}/*result页面body的属性，内边距为0*/
+.vote-body {/*vote页面body的属性，内边距为0，背景色为蓝色*/
   @extend %padding-0;
   @extend %background-blue;
 }
-.home-page-body {
-  padding-bottom: 4%;
+.home-page-body {/*home-page页面body的属性，高为100vh，背景色为白色，溢出隐藏*/
   height: 100vh;
   background: #f0f0f0;
+  @extend %overflow-hidden;
 }
+/*三个页面的父元素container和元素header的部分及home-page的侧边栏部分*/
 .result-body {
   .container {
     @include absolute(0, 0, 4%, 0);
@@ -70,10 +78,52 @@ body{
   }
 }
 .home-page-body {
+  /*侧边栏*/
+  #side{display: none;}
+  .side-nav{
+    position: absolute;
+    left:-75%;
+    @extend %inline-block;
+    width: 75%;
+    @extend %height;
+    transition: all .8s;
+    @extend %background-white;
+    .side-nav__menu{
+      padding: 10px 35px 10px 65px;
+      font-size: 2rem;
+      border-bottom: 1px solid #eaeaea;
+      color: #74d4eb;
+      transition: all .3s;
+      &:active{background-color: #e6e6e6;}
+      .side-nav__arrow{
+        padding-top: 4px;
+        padding-left: 61%;
+        float: right;
+      }
+    }
+    .side-nav__menu--notice{background: url("../images/side-nav__notice.png") no-repeat 20px 9px/27px;}
+    .side-nav__menu--set{background: url("../images/side-nav__set.png") no-repeat 20px 9px/27px;}
+    .side-nav__menu--help{background: url("../images/side-nav__help.png") no-repeat 20px 9px/27px;}
+    .side-nav__menu--set{background: url("../images/side-nav__set.png") no-repeat 20px 9px/27px;}
+    .side-nav__menu--about{background: url("../images/side-nav__about.png") no-repeat 20px 9px/27px;}
+  }
+  #side:checked ~ ul{left:0;}
+  .container{
+    @extend %inline-block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    @extend %width;
+    @extend %height;
+    transition: all .8s;
+    box-shadow: -3px 0px 6px #e6e6e6;
+  }
+  #side:checked ~ div{left: 75%;}
   header {
     @extend %background-blue;
   }
   .header__sidebar-button {
+    @extend %inline-block;
     margin: 7% 0 1% 7%;
     padding-top: 6%;
     width: 6%;
@@ -115,7 +165,7 @@ body{
     background: url("../images/vote-2.png") no-repeat 85% 69%/18%;
   }
 }
-
+/*三个页面的main主体部分*/
 .home-page-body {
   main {
     margin: 0 6%;
@@ -242,27 +292,6 @@ body{
     font-size: 1.7rem;
     @extend %text-align-right;
   }
-  footer{
-    %width-90{width: 90%;}
-    @include absolute(unset,0,0,0);
-    padding:4% 0;
-    background-color: rgba(52,190,222,0.45);
-    .footer__button{display: flex;}
-    .button__left,.button__right{
-      @extend %flex-1;
-      &>button{
-        @extend %width-90;
-        @extend %height;
-        margin: 0 4%;
-        padding:6% 0;
-        @extend %text-align;
-        border-radius: .5rem;
-        @extend %color-white;
-      }
-    }
-    .button__left>button{background: #f37072;}
-    .button__right>button{background: #f8b445;}
-  }
 }
 .vote-body{
   .main__msg{@include absolute(unset,0,unset,0);z-index: 9;}
@@ -321,6 +350,32 @@ body{
   }
   .msg--icon__icon{flex: 1;}
   .msg--icon__icon img{width: 84%;}
+}
+/*两个页面footer部分，home-page页面没有footer部分*/
+.result-body {
+  footer{
+    %width-90{width: 90%;}
+    @include absolute(unset,0,0,0);
+    padding:4% 0;
+    background-color: rgba(52,190,222,0.45);
+    .footer__button{display: flex;}
+    .button__left,.button__right{
+      @extend %flex-1;
+      &>button{
+        @extend %width-90;
+        @extend %height;
+        margin: 0 4%;
+        padding:6% 0;
+        @extend %text-align;
+        border-radius: .5rem;
+        @extend %color-white;
+      }
+    }
+    .button__left>button{background: #f37072;}
+    .button__right>button{background: #f8b445;}
+  }
+}
+.vote-body{
   footer{
     @include absolute(unset,0,4%,0);
     background-color: #29bde0;

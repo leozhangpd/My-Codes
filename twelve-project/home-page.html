@@ -7,33 +7,46 @@
     <title>版本选择</title>
 </head>
 <body class="home-page-body">
-    <header>
-        <button class="header__sidebar-button">
-        </button>
+    <input type="checkbox" id="side">
+    <ul class="side-nav">
+        <li class="side-nav__menu side-nav__menu--notice"><label for="side">公告
+            <img src="images/side-nav__arrow.png" class="side-nav__arrow"></label></li>
+        <li class="side-nav__menu side-nav__menu--set"><label for="side">设置
+            <img src="images/side-nav__arrow.png" class="side-nav__arrow"></label></li>
+        <li class="side-nav__menu side-nav__menu--help"><label for="side">帮助
+            <img src="images/side-nav__arrow.png" class="side-nav__arrow"></label></li>
+        <li class="side-nav__menu side-nav__menu--about"><label for="side">关于
+            <img src="images/side-nav__arrow.png" class="side-nav__arrow"></label></li>
+    </ul>
+    <div class="container">
+        <header>
+        <label for="side" class="header__sidebar-button">
+        </label>
     </header>
-    <main>
-        <div class="main__review">
-            <span class="review__content">上次游戏：捉鬼猜词版</span>
-        </div>
-        <div class="main__content">
-            <div class="content__title">
-                <span>捉鬼游戏</span>
+        <main>
+            <div class="main__review">
+                <span class="review__content">上次游戏：捉鬼猜词版</span>
             </div>
-            <ul class="content__option">
-                <li class="option__btn"><a href="vote.html">简化版</a></li>
-                <li class="option__hint">有1133个用户正在玩此款游戏</li>
-                <li class="option__btn "><a href="vote.html">猜词版</a><div class="option__btn--arrows"></div></li>
-                <li class="option__hint">有1133个用户正在玩此款游戏</li>
-                <li class="option__btn"><a href="vote.html">白痴版</a></li>
-                <li class="option__hint">有1133个用户正在玩此款游戏</li>
-            </ul>
-            <ul class="content__page">
-                <li class="page__dot"></li>
-                <li class="page__dot"></li>
-                <li class="page__dot"></li>
-                <li class="page__dot"></li>
-            </ul>
-        </div>
-    </main>
+            <div class="main__content">
+                <div class="content__title">
+                    <span>捉鬼游戏</span>
+                </div>
+                <ul class="content__option">
+                    <li class="option__btn"><a href="vote.html">简化版</a></li>
+                    <li class="option__hint">有1133个用户正在玩此款游戏</li>
+                    <li class="option__btn "><a href="vote.html">猜词版</a><div class="option__btn--arrows"></div></li>
+                    <li class="option__hint">有1133个用户正在玩此款游戏</li>
+                    <li class="option__btn"><a href="vote.html">白痴版</a></li>
+                    <li class="option__hint">有1133个用户正在玩此款游戏</li>
+                </ul>
+                <ul class="content__page">
+                    <li class="page__dot"></li>
+                    <li class="page__dot"></li>
+                    <li class="page__dot"></li>
+                    <li class="page__dot"></li>
+                </ul>
+            </div>
+        </main>
+    </div>
 </body>
 </html>
