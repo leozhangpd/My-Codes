@@ -1,0 +1,42 @@
+@charset "UTF-8";
+@import "navbar";
+/*header部分*/
+.header__top-nav{height:40px;}
+.top-nav__phone{
+  color: $green;
+  line-height: 2.8;
+  @extend %f-14;
+}
+.top-nav__icon{
+  margin-top: 7px;
+  text-align: right;
+  font-size: 0;
+}
+.icon-WeChat,.icon-qq,.icon-WeiBo{
+  display: inline-block;
+  height:30px;
+  width:30px;
+}
+.icon-WeChat{
+  background: url("../images/sprite.png") no-repeat 0 0/29rem;
+}
+.icon-qq{
+  margin:0 16px;
+  background: url("../images/sprite.png") no-repeat -4.2rem 0/29rem;
+}
+.icon-WeiBo{
+  background: url("../images/sprite.png") no-repeat -8.2rem 0/29rem;
+}
+.top-nav__login{
+  padding-right: 1rem;
+  line-height: 40px;
+  text-align: right;
+  @extend %f-14;
+}
+@media (max-width: 767px) {
+  .top-nav--hidden-xs { display: none;}
+}
+@media screen and (min-width: 768px){
+  .top-nav__login--hidden-md {display: none;}
+}
+/*header部分结束*/

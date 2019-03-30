@@ -1,0 +1,113 @@
+@charset "UTF-8";
+/*变量*/
+/*变量结束*/
+/*混合器*/
+/*混合器结束*/
+/*属性复用*/
+.main__top-title, .content__sidebar__top-title {
+  font-size: 1.6rem; }
+
+.carousel-inner img {
+  width: 100%; }
+
+/*属性复用结束*/
+.carousel-indicators li {
+  width: 10px;
+  height: 10px;
+  background-color: rgba(255, 255, 255, 0);
+  border: solid 1px #fff;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px; }
+
+.header__recommend {
+  width: 100%; }
+
+.main__content {
+  display: flex; }
+
+.main__top-title {
+  padding: 33px 0 28px 0; }
+  .main__top-title > span:nth-child(2) {
+    color: #29b078; }
+
+.content__sidebar__top-title {
+  margin-bottom: 34px;
+  padding: 18px 0;
+  font-weight: 600;
+  border-bottom: solid 1px #d8d8d8; }
+
+.content__sidebar {
+  height: 660px;
+  margin-right: 24px;
+  padding: 0;
+  background-color: #fff;
+  text-align: center;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 1px 1px 7px #d8d8d8;
+  -moz-box-shadow: 1px 1px 7px #d8d8d8;
+  box-shadow: 1px 1px 7px #d8d8d8; }
+
+.sidebar-list {
+  display: inline-block;
+  position: relative;
+  margin-bottom: 30px;
+  width: 85px;
+  color: #29b078 !important;
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-align: left;
+  cursor: pointer; }
+  .sidebar-list > span:active {
+    color: #ffa64c; }
+
+.circle {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  border: solid 1px #ff650e; }
+  .circle:active {
+    background-color: #ff650e; }
+  .circle span {
+    position: absolute;
+    top: 0;
+    left: 13px; }
+
+.content__column {
+  margin: 0 0 230px 0;
+  padding-bottom: 184px;
+  background-color: #fff;
+  -webkit-box-shadow: 1px 1px 7px #d8d8d8;
+  -moz-box-shadow: 1px 1px 7px #d8d8d8;
+  box-shadow: 1px 1px 7px #d8d8d8;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  line-height: 1.8; }
+
+.column__text {
+  font-size: 1.4rem; }
+
+.column__text--position {
+  display: inline-block;
+  padding: 25px 0 10px 0;
+  border-bottom: solid 1px #d8d8d8; }
+  .column__text--position > img {
+    float: left; }
+
+@media screen and (max-width: 1200px) {
+  .main__content {
+    display: block; }
+
+  .content__column {
+    margin: 30px 0 30px 0; }
+
+  main {
+    padding-bottom: 10px; } }
+
+/*# sourceMappingURL=cooperation.css.map */

@@ -1,0 +1,133 @@
+@charset "utf-8";
+
+/*变量*/
+$f-1:1rem;
+/*变量结束*/
+
+/*混合器*/
+@mixin position($position:absolute,$top:0,$right:0,$bottom:0,$left:0,
+$atop:false,$aright:false,$abottom:false,$aleft:false,
+$all:false,$two:false,$side1:none,$side2:none,$value1:0,$value2:0){
+  position: $position;
+  @if($atop){
+    top: $top;
+  }@else if($aright){
+    right:$right;
+  }@else if($abottom){
+    bottom: $bottom;
+  }@else if($aleft){
+    left: $left;
+  }@else if($all){
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+  }@else if($two){
+    #{$side1}:$value1;
+    #{$side2}:$value2;
+  }
+}
+@mixin b-t-b(){
+  border-top:solid 1px mix($white,$black,81%);
+  border-bottom:solid 1px mix($white,$black,81%);
+}
+@mixin b-t($value,$color:$white,$boolean:false){
+  @if $boolean {
+    border-top: solid $value;
+  }@else{
+    border-top: solid $value $color;
+  }
+}
+@mixin b-b($value,$color:$white,$boolean:false){
+  @if $boolean {
+    border-bottom: solid $value;
+  }@else{
+  border-bottom: solid $value $color;
+}
+}
+@mixin border($value,$color:$white,$boolean:false){
+  @if $boolean {
+    border: solid $value;
+  }@else{
+    border: solid $value $color;
+  }
+}
+@mixin f-f($weight:bold,$size:1.2rem,$boolean:false){
+  font-size: $size;
+  @if($boolean){
+    font-weight: $weight;
+  }
+}
+@mixin b-r($value:10px){
+  -webkit-border-radius: $value;
+  -moz-border-radius: $value;
+  border-radius: $value;
+}
+@mixin text-center(){
+  text-align: center;
+  text-align: -webkit-center;
+}
+@mixin b-s($value...){
+  -webkit-box-shadow: $value;
+  -moz-box-shadow: $value;
+  box-shadow: $value;
+}
+@mixin b-s-117-91(){
+  @include b-s(1px 1px 7px mix($white,$black,91%));
+}
+@mixin transition($value...){
+  -webkit-transition: $value;
+  -moz-transition: $value;
+  -o-transition: $value;
+  transition: $value;
+}
+@mixin transform($value...){
+  -webkit-transform: $value;
+  -moz-transform: $value;
+  -ms-transform:$value;
+  -o-transform: $value;
+  transform: $value;
+}
+
+/*混合器结束*/
+
+/*属性复用*/
+%b-s-016-91{
+  @include b-s(0 1px 6px mix($white,$black,91%));
+}
+%display-none{display: none;}
+%inline-block{display: inline-block;}
+%flex-wrap{
+  display: flex;
+  flex-wrap: wrap;
+}
+%padding-0{padding: 0;}
+%text-center{text-align: center;}
+%f-12{font-size: 1.2rem;}
+%f-14{font-size: 1.4rem;}
+%f-16{font-size: 1.6rem;}
+%white{color: $white!important;}
+%f14-w500{
+  @include f-f($weight:500,$size:1.4rem);
+}
+%m-b-0{margin-bottom: 0;}
+%w96-m0{
+  width:9.6rem;
+  margin:0 0 0 auto;
+}
+%w-100{width: 100%;}
+%m-b-6-5{margin-bottom: 65px!important;}
+%m-0-auto{margin: 0 auto;}
+%link-img{
+  margin:auto;
+  width: 200px;
+  height: 70px;
+}
+%b-b-s1{
+  @include b-b(1px,$color:$light-grey);
+}
+%b-r-1{
+  border-right:solid 1px $light-grey;
+}
+/*属性复用结束*/
+

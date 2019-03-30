@@ -1,0 +1,8 @@
+@charset "UTF-8";
+ul,li{display:block;list-style-type: none;margin: 0;padding: 0;}
+a:link,a:visited,a:hover,a:active{text-decoration: none}
+button{outline: none!important;border:none;}
+/*必须是html100%高度body才是100%高度*/
+html,body{height:100%;font-size: calc(10px);}
+header,main{background: #fafafa;}
+h3,h4{font-size: 1.6rem;font-weight: bold;}
