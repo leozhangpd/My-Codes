@@ -1,0 +1,29 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Title</title>
+    <style type="text/css">
+        #container {
+            width: 80%;
+            height: 500px;
+        }
+/*主要知识点是padding-bottom的百分比值是相对包含块的宽度来算的*/
+        .attr {
+            float: left;
+            width: 50%;
+            height: 0;
+            padding-bottom: 50%;
+            background-color: #008b57;
+        }
+    </style>
+</head>
+<body>
+<div id='container'>
+    <div class='attr'></div>
+    <div class='attr'></div>
+    <div class='attr'></div>
+    <div class='attr'></div>
+</div>
+</body>
+</html>

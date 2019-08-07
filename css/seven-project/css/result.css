@@ -1,0 +1,165 @@
+ul,li{display:block;list-style-type: none;margin: 0;padding: 0;}
+button{outline: none;border:none;}
+html,body{height:100%;}
+a:link,a:visited,a:hover,a:active {text-decoration:none;color: #fff;}
+html{
+    font-size: calc(10px);
+}
+body{
+    position: relative;
+    margin: 0 auto;
+    padding:0;
+    max-width: 720px;
+    min-width: 320px;
+}
+.container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 4%;
+    overflow: auto;
+}
+header,main{background-color: #29bde0;}
+header{
+    display: flex;
+    border-bottom: 1px solid #74d4eb;
+}
+header span{   /*.header__content*/
+    display: inline-block;
+    flex: 1;
+    width:33%;
+    margin-top: 5.8%;
+    font-family: serif;;
+    font-size: 2rem;
+    color: #ffffff;
+    text-align: center;
+}
+.header-left,.header-right{
+    display: inline-block;
+    flex: 1;
+    width:33%;
+    padding-top:14%;
+}
+.header-left{
+    background: url("../images/result-1.png") no-repeat 14% 68%/21%;
+}
+.header-right{
+    background: url("../images/result-2.png") no-repeat 85% 69%/19%;
+}
+.main-logo{
+    text-align: center;
+}
+.main-logo>img{/*logo__img*/
+    padding:3% 0 0;
+    width: 56%;
+}
+.main-msg{
+    padding: 2% 12.2% 3%;
+    letter-spacing: .1rem;
+    text-align: justify;
+}
+.main-msg>li:nth-child(1){
+    color: #ffc865;
+    font-size: 1.5rem;
+    padding-bottom: 10%;
+}
+.main-msg>li:nth-child(1)~li{/*msg__content*/
+    display: flex;
+    font-size: 1.4rem;
+    color: #fff;
+    line-height: 130%;
+}
+.main-msg>li:nth-child(3)>span/*content__the-third-line*/,.main-msg>li:nth-child(4)>span{/*content__the-fourth-line*/
+    flex: 1;
+}
+.main-msg>li:nth-child(4)>span:nth-child(1){/*content__the-fourth-line*/
+    letter-spacing: .2rem;
+}
+.main-msg>li:nth-child(4)>span:nth-child(2){/*content__the-fourth-line*/
+    padding-right: 33.5%;
+}
+.main-content{}
+.main-list{/*content__list*/
+    padding:1% 12% 5%;
+    background: #fff;
+    border-bottom:1px solid #a6a6a6;
+}
+.main-list>li:nth-child(1){/*list__content*/
+    display: flex;
+}
+.main-list>li:nth-child(1)>span{/*content__item*/
+    flex: 1;
+    padding-bottom: 1.5%;
+    align-content: center;
+}
+.main-list>li>span:nth-child(1){/*content__item--left*/
+    font-size: 1.6rem;
+    color: #000;
+}
+.main-list>li>span:nth-child(2){/*content__item--right*/
+    padding-right: 8%;
+    font-size: 1.1rem;
+    color: #cfcfcf;
+    text-align: right;
+    line-height: 265%;
+}
+.main-list>li~li{/*list__content--text*/
+    font-size: 1.3rem;
+    color: #a6a6a6;
+    letter-spacing: .1rem;
+}
+.container-status{display: flex}
+.container-status>span:nth-child(1),.container-status>span:nth-child(2){/*status__content*/
+    flex:1;
+    color: #29bde0;
+}
+.container-status>span:nth-child(1){/*status__content--left*/
+    padding:1% 0 0 7%;
+    font-size: 2.1rem;
+}
+.container-status>span:nth-child(2){/*status__content--right*/
+    padding:3% 8% 0 0;
+    font-size: 1.7rem;
+    text-align: right;
+}
+footer{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 4% 0;
+    background-color: rgba(52,190,222,0.45);
+}
+.footer-button{
+    display: flex;
+}
+.footer-button>button ,.footer-button>a{
+    flex: 1;}
+.footer-button>button,.footer-button>a>button:nth-child(1){
+    width: 100%;
+    height: 100%;
+    margin: 0 4%;
+    padding: 3% 0;
+    border-radius: 0.5rem;
+    color: #fff;
+}
+.footer-button>a>button:nth-child(1){
+    background: #f37072;
+}
+.footer-button>button:nth-child(2){
+    background: #f8b445;
+}
+
+/*@media screen and (min-width: 720px){*/
+    /*header>span{font-size: 43px;}*/
+    /*.main-msg>li:nth-child(1){font-size: 33px;}*/
+    /*.main-msg>li:nth-child(1)~li{font-size: 26px;}*/
+    /*.main-msg{letter-spacing: 4px;}*/
+    /*.main-list>li>span:nth-child(1) {font-size: 32px;}*/
+    /*.main-list>li>span:nth-child(2) {font-size: 21px;}*/
+    /*.main-list>li~li {font-size: 25px;letter-spacing: 2px;}*/
+    /*.container-status>span:nth-child(1) {font-size: 42px;}*/
+    /*.container-status>span:nth-child(2) {font-size: 35px;}*/
+    /*.footer-button>button,.footer-button>a>button:nth-child(1){font-size: 4rem;}*/
+/*}*/

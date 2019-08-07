@@ -1,0 +1,67 @@
+html{
+    font-size: 625%;/*原来使用62.5%，但是chrome最小只支持12px，所以改成625%了*/
+    margin: 0;
+}
+body{
+    margin:0;
+}
+.main{
+    background-color:#68cdd5;
+    width:100%;
+    height:100%;
+    position: relative;
+    overflow: hidden/*清除浮动*/
+}
+.left-top-return-button{
+    margin-bottom: 0.032rem;
+    background-image: url("images/task3_03.png");/*只显示图片，没有其它功能*/
+    background-repeat: no-repeat;
+    background-size: 0.30rem;/*背景图本身图片的尺寸*/
+    position: relative;
+    top: 0.15rem;
+    left: 0.15rem;
+    width:0.54rem;
+    height: 0.54rem;/*如果没有width和height的话则无法显示背景图片，虽然已经有图片了，他俩是最上面的口子，显示的口子*/
+}
+.Home-icon-button{
+    margin-top: 0.30rem;
+    text-align: center;
+}
+.Home-icon-button>img{
+    width:130px;
+    height:50px;
+
+}
+.text-content{
+    font-size: 0.16rem;
+    color: white;
+    margin: 0.8rem 15% 1rem 15%;
+}
+.text-content>p{
+    line-height: 0.30rem;
+}
+.bottom-content{
+    margin:0 15% 0 15%;
+}
+.bottom-content-left{
+    float: left;
+    background-image: url("images/task3_14.png");
+    background-repeat: no-repeat;
+    background-size: 0.9rem 0.8rem;
+    height: 0.9rem;
+    width: 0.9rem;
+}
+.bottom-content-right{
+    float: right;
+    background-image: url("images/task3_17.png");
+    background-repeat: no-repeat;
+    background-size: 0.9rem 0.8rem;
+    height: 0.9rem;
+    width:0.9rem;
+}
+.bottom-content-right,.bottom-content-left p{
+    padding-top: 0.75rem;
+    font-size: 0.15rem;
+    color: #ffffff;
+    text-align: center;
+}

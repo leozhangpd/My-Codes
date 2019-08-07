@@ -1,0 +1,17 @@
+body{
+    margin:0;
+    padding-right:0;
+    width:100%;
+}
+.main{
+    padding:3% 0 0 5%;
+
+}
+.kuai{
+    float: left;
+    margin: 0 3% 3% 0;
+    padding:30% 0 0 0;
+    width:30%;
+    background: yellow;
+    border-radius: 15px;
+}

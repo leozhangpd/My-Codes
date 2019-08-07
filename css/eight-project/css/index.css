@@ -1,0 +1,231 @@
+.carousel-indicators li{
+    width: 10px;
+    height:10px;
+    background-color: rgba(255,255,255,0);
+    border: 1px solid #fff;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+.carousel-inner img{width:100%;}
+
+.main-content-1{padding: 13.2rem 0 0 0;}/*main__introduce*/
+main{padding-bottom: 9.3rem}
+main h3{font-weight: bold;font-size: 1.8rem;}
+.main-content-1/*main__introduce*/>div/*introduce__column*/{
+    text-align: center;
+    text-align:-webkit-center;
+    margin-top: 3rem;
+}
+.main-content-1>div>h3{padding: 3rem 0 2.5rem 0;}/*column__title*/
+.main-content-1>div>p{/*column__content*/
+    font-size: 1.6rem;
+}
+.main-content-1>div p{/*content__illustration*/
+    color: #999999;
+}
+.main-content-1>div div{/*兼容旧浏览器*/
+    margin:auto;
+}
+.main-img-1-1{/*column__img-efficient*/
+    width: 4.3rem;
+    height: 6.2rem;
+    background: url("../images/sprite.png") no-repeat 0 -3.9rem/28rem;
+}
+.main-img-1-2{/*column__img-criterion*/
+    width: 6rem;
+    height: 6.2rem;
+    background: url("../images/sprite.png") no-repeat -12.4rem -3.2rem/28rem;
+}
+.main-img-1-3{/*column__img-connection*/
+    width: 6rem;
+    height: 6.2rem;
+    background: url("../images/sprite.png") no-repeat -5.4rem -3.3rem/28rem;
+}
+.main-content-1>div:nth-child(4){/*introduce__column--count*/
+    display: flex;
+    font-size: 1.75rem;
+    text-align: left;
+}
+.main-img-1-4{/*content__img*/
+    display: inline-block;
+    width: 1.3rem;
+    height: 1.8rem;
+    background: url("../images/sprite.png") no-repeat -9.6rem -0.1rem/23rem;
+}
+.main-content-1>div:nth-child(4) span:nth-child(2){/*content__number*/
+    position: relative;
+    top: -0.5rem;
+    padding-left: 0.4rem;
+    font-weight: bold;
+    color: #29b078;
+}
+.main-content-1>div:nth-child(4)>div{/*column__count*/
+    margin:6.5rem auto 0 auto;
+}
+.main-content-1>div:nth-child(4)>div>div:nth-child(2){/*count__content--side*/
+    margin-top: 2.3rem;
+}
+.main-content-2{/*main__study*/
+    padding-top: 10rem;
+}
+.main-content-2>li{
+    display: flex;
+    align-items: center;
+    padding:0;
+}
+.main-content-2>li>h3/*study__title*/,.main-content-3/*main__show*/>h3/*show__title*/{
+    margin:0 auto;
+}
+.main-content-2>li>h3/*study__title*/{margin:0 auto 5.4rem auto;}
+.main-content-2>li/*study__summary*/>span{
+    display: inline-block;
+    width: 14rem;
+    font-size: 1.4rem;
+}
+.summary{/*study__summary*/
+    margin-bottom: 9.2rem;
+}
+.summary>span:nth-child(1){/*summary__number*/
+    text-align: center;
+    line-height: 4;
+}
+
+.summary>span:nth-child(1){/*summary__number*/
+    width: 6.8rem;
+    height:6.8rem;
+    background: #fff;
+    border-radius: 50%;
+    font-size: 1.75rem;
+    color: #52ce96;
+    box-shadow: 0 3px 4px #f0efef;
+}
+.summary>span:nth-child(2){/*summary__msg*/
+    margin: 0 2rem 0 1.8rem;
+    line-height: 1.8;
+    color: #949494;
+    font-weight: bold;
+}
+.summary>span:nth-child(3){/*summary__arrow*/
+    width: 2.8rem;
+    height: 2.6rem;
+    background: url("../images/sprite.png") no-repeat -15rem 0/29rem;
+}
+.main-content-2>li:nth-child(9)>span:nth-child(2){width:14rem;padding-right: 2rem;}/*summary__msg--8*/
+.main-content-2>li:nth-child(n+2){justify-content: center;}/*study__summary*/
+.main-content-3{margin: 3rem 0 12rem 0;}/*main__show*/
+.main-content-3>h3/*show__title*/,.student-column/*show__student-column*/,.main-content-4>h3/*partner__title*/{display: flex;flex-wrap: wrap;}
+.main-content-3>h3/*show__title*/,.main-content-4>h3/*partner__title*/{
+    margin-bottom: 6.5rem;
+}
+.main-content-3>h3>span/*show__title__text*/,.main-content-4>h3>span/*partner__title__text*/{margin:0 auto;}
+#demo1>.carousel-indicators li{/*indicators__pagination*/
+    border:none;
+    background-color: #ffffff;
+}
+.main-content-3/*main__show*/ .carousel-indicators .active{background-color: #29b078!important;}
+.main-content-3/*main__show*/ .carousel-indicators li{/*indicators__pagination*/
+    width:15px;
+    height:15px;
+    box-shadow: 0 1px 6px #d8d8d8;
+}
+.main-content-3/*main__show*/ .carousel-indicators{bottom:-2rem;}
+.student-column/*show__student-column*/>li{/*student-column__tab*/
+    margin: .5rem auto 2.2rem auto;
+    box-shadow: 0 1px 6px #d8d8d8;
+    -webkit-border-radius: 2%;
+    -moz-border-radius: 2%;
+    border-radius: 2%;
+}
+.student-column>li>div{/*tab__icon*/
+    margin:1.9rem auto 4.3rem auto;
+    width: 10.8rem;
+    height:10.8rem;
+}
+.student-column-1>div{background:url("../images/sprite.png") no-repeat -24.5rem -37.5rem/35rem;}/*.tab__icon--1*/
+.student-column-2>div{background:url("../images/sprite.png") no-repeat -24.5rem -13.5rem/35rem;}/*.tab__icon--2*/
+.student-column-3>div{background:url("../images/sprite.png") no-repeat -24.5rem -25.5rem/35rem;}/*.tab__icon--3*/
+.student-column-4>div{background:url("../images/sprite.png") no-repeat -24.5rem -1.5rem/35rem;}/*.tab__icon--4*/
+.student-column>li>h3{/*tab__title*/
+    margin:0 auto 0 auto;
+    text-align: center;
+}
+.student-column>li>p{/*tab__intro*/
+    padding:3rem 0 3rem 0;
+}
+.student-column>li>p{font-size: 1.6rem;}/*tab__intro*/
+.carousel-control-prev-icon,.carousel-control-next-icon{background-image:none}
+.main-content-4>div{/*partner__content*/
+    margin: 6.5rem 0 0 0;
+}
+.company-column{/*content__company-column*/
+    display: flex;
+    flex-wrap: wrap;
+}
+.company-column>li {/*company-column__list*/
+    display: flex;
+    padding: 0;
+    height: 17.6rem;
+    width: 24rem;
+    background-color: #ffffff;
+    box-shadow: 0 1px 6px #d8d8d8;
+    -webkit-transition: all 0.3s ease-in;
+    -moz-transition: all 0.3s ease-in;
+    -o-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
+}
+.company-column>li>a {/*list__link*/
+    display: flex;
+    margin:auto;
+    width: 90%;
+    height: 100%;
+}
+.company-column>li:hover{
+    z-index: 1;
+    box-shadow: 0 1px 6px #d8d8d8;
+    -webkit-transform: rotate(0deg) scale(1.05);
+    -moz-transform: rotate(0deg) scale(1.05);
+    -ms-transform: rotate(0deg) scale(1.05);
+    -o-transform: rotate(0deg) scale(1.05);
+    transform: rotate(0deg) scale(1.05);
+}
+.company-column-1,/*link-img-1*/
+.company-column-2,/*link-img-2*/
+.company-column-3,/*link-img-3*/
+.company-column-4,/*link-img-4*/
+.company-column-5{/*link-img-5*/
+    margin:auto;
+    width:20rem;
+    height:7rem;
+}
+.company-column-1{background: url("../images/sprite.png") no-repeat 2.5rem -43.8rem/40rem;          }/*link-img-1*/
+.company-column-2{width:10rem;background: url("../images/sprite.png") no-repeat 2.1rem -51rem/40rem;}/*link-img-2*/
+.company-column-3{background: url("../images/sprite.png") no-repeat 2.5rem -34.8rem/40rem;          }/*link-img-3*/
+.company-column-4{background: url("../images/sprite.png") no-repeat 0.5rem -25.8rem/40rem;          }/*link-img-4*/
+.company-column-5{background: url("../images/sprite.png") no-repeat 0.5rem -16.8rem/40rem;          }/*link-img-5*/
+
+@media (min-width: 576px){.student-column>li{max-width:99.6%;}}/*student-column__tab*/
+@media screen and (min-width: 768px){
+    .main-content-1>div:nth-child(4){border-left: 2px dashed #dee2e6;}/*introduce__column--count*/
+    .main-content-2>li:nth-child(5)>span:nth-child(3){display: none}/*summary__arrow--none*/
+    .main-content-2>li:nth-child(9)>span:nth-child(3){display: none;}/*summary__arrow--none*/
+    .student-column>li{flex:0 0 44%;}/*student-column__tab*/
+}
+
+@media screen and (min-width: 992px){
+    .student-column>li{flex:0 0 46%;}/*student-column__tab*/
+}
+@media screen and (min-width: 1200px) {
+    .main-content-2 > li:nth-child(5),/*study__summary--flex*/
+    .main-content-2 > li:nth-child(9) {flex:0 0 20%;}/*study__summary--flex*/
+    .student-column>li{flex:0 0 22%;}/*student-column__tab*/
+    .company-column>li{flex:0 0 20%;}/*company-column__list*/
+}
+@media (min-width: 768px) and (max-width: 1199px){
+    .main-content-2>li:nth-child(odd):not(:first-child)>span:nth-child(3){display: none}/*summary__arrow--again*/
+}
+@media (min-width:992px) and (max-width: 1199px) {
+    .summary>span:nth-child(3){margin-right: -8.5rem;}
+    .summary>span:first-child+li+li{margin-right: -8.5rem;}/*暂无意义*/
+    .main-content-2>li:nth-child(n+2) {justify-content: space-evenly;}
+}

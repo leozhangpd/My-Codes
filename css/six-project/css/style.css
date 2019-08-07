@@ -1,0 +1,186 @@
+ul,li{list-style: none; margin: 0; padding: 0;}
+html{
+    margin:0;
+    font-size: 62.5%;
+}
+body{
+    margin: 0;
+    padding:0;
+}
+header{
+    position: fixed;
+    left:0;
+    right:0;
+    top:0;
+    height:4rem;
+    background: #5fc0cd;
+}
+main{
+    position: absolute;
+    top: 7.7rem;
+    left:0;
+    right:0;
+    margin-bottom: 60px;
+    overflow: hidden;
+    z-index: -1;/*原先下拉框弹出的部分老被main的内容所覆盖，所以只能设置这一属性变为负，站在header的后面，才解决不被覆盖的问题*/
+}
+.title{
+    position: relative;
+    top:50%;
+    height:100%;
+    padding: 0 3%;
+    font-size: 0;
+    text-align: center;
+    transform: translateY(-50%);
+    background:url("../images/sprite.png") no-repeat 97% -7.8rem/ 29px;
+}
+section{
+    display: inline-block;
+    width: 147px;
+    height:37px;
+    background: #55a8b3;
+    font-size: 18px;
+    -webkit-text-size-adjust:none;
+    transform: translateY(14%);
+    border-radius: 6px;
+}
+input[type="radio"]{
+    display: none;
+}
+input[type="radio"]:checked + label {
+    background: #55a8b3;
+    z-index: 1;
+    color: #ffffff;
+}
+label:first-of-type {
+    margin-left: 2px;
+}
+label {
+    display: inline-block;
+    margin-left: -5px;
+    width:49%;
+    height:100%;
+    background: #fff;
+    cursor: pointer;
+    border-radius: 6px;
+}
+label>span{
+    line-height:2.9rem;
+}
+/*下拉菜单*/
+.nav{
+    display: flex;
+    background: #fff;
+}
+select{
+    flex: 1;
+    padding: 1rem 1rem 1rem 1.8rem;
+    color: #afbac0;
+    text-align:center;
+    text-align-last:center;
+}
+select,select>option{
+    border:none;
+    outline: none;
+}
+.nav>select:nth-child(3){
+    padding: 1rem 0.8rem 1rem 0.9rem;
+}
+.select-border-left,.select-border-right{
+    display: inline-block;
+    margin-top:4px;
+    content: ' ';
+    width:1px;
+    height: 36px;
+    background: linear-gradient(#fbfbfb, #dbdbdb, #fbfbfb);
+}
+.bottom-border{
+    border-bottom:1px solid #e1e5e7;
+}
+.summary-space{
+    padding:1rem 3% 1rem 5%;
+    list-style: none;
+}
+.summary-date,.summary-place{
+    padding-left: 1.8rem;
+    color: #999999;
+}
+.summary-date{
+    display: inline-block;
+    background: url("../images/sprite.png") no-repeat 0 .2rem/29px;
+}
+.summary-place{
+    background: url("../images/sprite.png") no-repeat -7px 47%/29px;
+}
+.summary-dates{
+    display: flex;
+    padding-left: 1.8rem;
+    background: url("../images/sprite.png") no-repeat 100% 85%/29px;
+}
+.summary-dates>span{
+    flex: 1;
+}
+.summary-dates>span:nth-child(2){
+    margin-left: -7.5rem;
+    padding-right: 3rem;
+    font-size: 16px;
+    color: #ff0000;
+    text-align: right;
+}
+.summary-place,.summary-dates,.summary-dates>span:first-child,.summary-date{
+    font-size: 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+footer{
+    position: fixed;
+    left:0;
+    right:0;
+    bottom:0;
+    height: 61px;
+    background: #f8fafb;
+    border-top:1px solid #e1e5e7;
+}
+.footer-home{
+    margin: 0.8rem 0 0 22%;
+    height: 3rem;
+    background: url("../images/sprite.png") no-repeat 2px 69%/29px;
+}
+.footer-home>span{
+    position: relative;
+    top: 1.7rem;
+    left:-1px;
+    font-size: 1rem;
+    color: #5fc0cd;
+}
+.footer-edit{
+    display: inline-block;
+    position: fixed;
+    left: 50%;
+    bottom: 1px;
+    background: #5fc0cd url("../images/sprite.png") no-repeat 17px -27px/29px;
+    border-radius: 50%;
+    margin-left: -27px;
+    padding: 2.4rem;
+}
+.footer-person{
+    display: inline-block;
+    position: fixed;
+    right: 0;
+    bottom: 16px;
+    margin: 0.8rem 22% 0 0;
+    width: 3.1rem;
+    height: 3rem;
+    background: url("../images/sprite.png") no-repeat 6px -343px/29px;
+}
+.footer-person>span{
+    position: relative;
+    top: 1.9rem;
+    color: #999999;
+    font-size: 1rem;
+}
+footer>button{
+    outline: none;
+    border:none;
+}

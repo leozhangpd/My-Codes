@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>纯CSS实现百叶窗</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #parent >li> span{background: #999999;display: block;width: 200px;border:1px solid #ECEEF2;}
+        li {height:40px;line-height: 40px;display: block;}
+        li  p{
+            display: inline-block;
+            width: 0px;
+            height: 0px;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-top: 5px solid#2f2f2f;
+        }
+        #parent{position: relative;}
+        li>ul{
+            max-height: 0px;
+            overflow: hidden;
+            transition: all .5s;
+        }
+        li>ul>li{border: 1px solid #DEDEDE;width: 199px;}
+        #parent span:hover + ul{max-height: 300px;}/*相对于使用height（固定死的），max-height对内容（动态的，也就是高度不固定）拥有更大的兼容性，因为只要设置的值比内容高度大，内容且是动态的话，也就是高度不固定，则内容有多高（max-height最大值的范围内），max-height就有多高*/
+        #parent span:hover >p{
+            display: inline-block;
+            width: 0px;
+            height: 0px;
+            border-top: 5px solid transparent;
+            border-bottom: 5px solid transparent;
+            border-left: 5px solid#2f2f2f;}
+    </style>
+</head>
+<body>
+<ul id="parent">
+    <li>
+        <span><p></p>列表</span>
+        <ul>
+            <li>列表</li>
+            <li>列表</li>
+            <li>列表</li>
+        </ul>
+    </li>
+    <li>
+        <span><p></p>列表</span>
+        <ul>
+            <li>列表</li>
+            <li>列表</li>
+            <li>列表</li>
+        </ul>
+    </li>
+</ul>
+<!--地址：https://www.cnblogs.com/syfwhu/p/4453960.html-->
+</body>
+</html>
+<!--<!DOCTYPE html >-->
+<!--<html lang="en">-->
+<!--<head>-->
+    <!--<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">-->
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge" />-->
+    <!--<title>更换单选按钮显示样式</title>-->
+    <!--<style>-->
+        <!--input[type='radio'].radio {opacity:0; display:inline-block; height:20px; }-->
+        <!--label.radio {background:url(eight-project/images/job-title-1.jpg) no-repeat; height:20px; padding-left:25px;}-->
+        <!--input[type='radio'].radio:checked + .radio {background:url(eight-project/images/job-title-2.jpg) no-repeat;}-->
+    <!--</style>-->
+<!--</head>-->
+<!--<body>-->
+
+<!--<input type="radio" name="gender" id="x" value="X"><label for="x">我要保密</label><br>-->
+<!--<input type="radio" name="gender" id="y" value="M"><label for="y">我是帅哥</label><br>-->
+<!--<input type="radio" name="gender" id="z" value="F"><label for="z">我是美女</label><br>-->
+
+<!--<input type="radio" name="sex" id="a" value="X" class="radio"><label for="a" class="radio">我要保密</label><br>-->
+<!--<input type="radio" name="sex" id="b" value="M" class="radio"><label for="b" class="radio" >我是帅哥</label><br>-->
+<!--<input type="radio" name="sex" id="c" value="F" class="radio"><label for="c" class="radio" >我是美女</label><br>-->
+<!--</body>-->
+<!--</html>-->

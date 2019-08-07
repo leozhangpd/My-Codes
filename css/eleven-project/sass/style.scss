@@ -1,0 +1,383 @@
+ul,li{list-style: none; margin: 0; padding: 0;}
+select::-ms-expand { display: none; }
+html{@extend body;
+  font-size: 62.5%;
+  font-size: -webkit-calc(10px);
+  font-size: -moz-calc(10px);
+  font-size: calc(10px);
+}
+body{margin: 0;padding: 0;}
+a{text-decoration: none;outline: none;}
+$cyan: #5fc0cd;
+$white: #ffffff;
+$gray: #999999;
+@mixin wh($width,$height){
+  width: $width;
+  height: $height;
+}
+@mixin border($side,$value){
+  -webkit-border-#{$side}: $value;
+  -moz-border-#{$side}: $value;
+  border-#{$side}: $value;
+}
+@mixin fixed($top,$right,$bottom,$left){
+  position: fixed;
+  top:$top;
+  right:$right;
+  bottom:$bottom;
+  left:$left;
+}
+@mixin absolute($top,$right,$bottom,$left){
+  position: absolute;
+  top:$top;
+  right:$right;
+  bottom:$bottom;
+  left:$left;
+}
+@mixin relative($top,$right,$bottom,$left){
+  position: relative;
+  top:$top;
+  right:$right;
+  bottom:$bottom;
+  left:$left;
+}
+@mixin transform($position){
+  -webkit-transform: translateY($position);
+  -moz-transform: translateY($position);
+  -ms-transform: translateY($position);
+  -o-transform: translateY($position);
+  transform: translateY($position);
+}
+header{
+  @include fixed(0,0,unset,0);
+  height:4.8rem;
+  background: $cyan;
+  a{font-size: 11px;}
+}
+.index>header{
+  @extend header;
+  height:4rem;
+  line-height:4rem;
+  text-align: center;
+  a{
+    position: absolute;
+    color: $white;
+    text-decoration: none;
+    left:1rem;
+    strong{font-size: 2rem;}
+  }
+  h2{
+    display: inline-block;
+    color: $white;
+    margin: 0 auto;
+    padding:0;
+    font-size: 1.6rem;
+  }
+}
+.assistant .bottom-border{
+  @include border(bottom,1px solid #e1e5e7);
+}
+%rim{
+  border:none;
+  outline:none;
+}
+.assistant>header{
+  .title{
+    @include relative(50%,unset,unset,unset);
+    height: 100%;
+    padding:0 3%;
+    font-size: 0;
+    text-align: center;
+    @include transform(-50%);
+    background:url("../images/sprite.png") no-repeat 97% -94px/ 29px;
+    $gray1: #55a8b3;
+    section{
+      display: inline-block;
+      @include wh(14.7rem,3.7rem);
+      background: $gray1;
+      font-size: 1.8rem;
+      -webkit-text-size-adjust: none;
+      @include transform(14%);
+      @include border(radius,.6rem);
+      input[type="radio"]{
+        display: none;
+      }
+      input[type="radio"]:checked + label{
+        background: $gray1;
+        z-index: 1;
+        color: $white;
+      }
+      label:first-of-type{margin-left: 2px;}
+      label{
+        display: inline-block;
+        margin-left: -5px;
+        @include wh(49%,100%);
+        background: $white;
+        cursor: pointer;
+        @include border(radius,.6rem);
+        span{line-height: 3.4rem;}
+      }
+    }
+  }
+  .nav{
+    display: flex;
+    background: $white;
+    select{
+      @extend %rim;
+      flex: 1;
+      padding: 1.2rem 1rem 1.2rem 1.8rem;
+      color: #afbac0;
+      text-align:center;
+      text-align-last:center;
+      background: #fff;
+      appearance:none;
+      -moz-appearance:none;
+      -webkit-appearance: none;
+    }
+    option{
+      @extend %rim;
+    }
+    select:nth-child(3){padding: 0 .8rem 0 .9rem;}
+    .select-border-left{
+      position: relative;
+      display: inline-block;
+      margin-top:.4rem;
+      content: ' ';
+      @include wh(.1rem,3.6rem);
+      background: linear-gradient(#fbfbfb, #dbdbdb, #fbfbfb);
+    }
+    .select-border-right{
+      @extend .select-border-left;
+      position: relative;
+    }
+  }
+}
+.arrow-bottom-1{
+  @include absolute(14px,unset,unset,-16px);
+  display: inline-block;
+  width: 0;
+  font-size: 0;
+  line-height: 0;
+  border-radius: 3px;
+  border-width: 6px;
+  border-color: #afbac0;
+  border-bottom-width: 0;
+  border-style: dashed;
+  border-top-style: solid;
+  border-left-color: transparent;
+  border-right-color: transparent;
+}
+
+.arrow-bottom-2{
+  @extend .arrow-bottom-1;
+}
+.arrow-bottom-3{
+  @extend .arrow-bottom-1;
+  @include absolute(66px,10px,unset,auto);
+}
+.assistant main{
+  @include absolute(9rem,0,unset,0);
+  margin-bottom: 6rem;
+  overflow: hidden;
+  z-index: -1;
+  %summary-public{
+    font-size: 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+   .summary-space{
+    padding:1rem 3% 1rem 5%;
+    list-style: none;
+    div:nth-of-type(3){
+      @extend %summary-public;
+      background: url("../images/sprite.png") no-repeat -7px 47%/29px;}
+  }
+  .summary-dates{
+    @extend %summary-public;
+    display: flex;
+    padding-left: 23px;
+    background: url("../images/sprite.png") no-repeat 100% 85%/29px;
+    span:first-child{@extend %summary-public;
+      color: #000;}
+    span{flex: 1;}
+    span:nth-child(2){
+      margin-left: -7.5rem;
+      padding-right: 3rem;
+      font-size: 16px;
+      color: #ff0000;
+      text-align: right;
+    }
+  }
+  .summary-place{
+    padding-left: 23px;
+    color: #999999;
+  }
+  .summary-date{
+    @extend %summary-public;
+    @extend .summary-place;
+    display: inline-block;
+    background: url("../images/sprite.png") no-repeat 0 .2rem/29px;
+  }
+}
+.index main{
+  @include absolute(4rem,0,7.8rem,0);
+  overflow-x: hidden;
+  overflow-y: auto;
+  .main-header{
+    font-size: 1.2rem;
+    color: $white;
+    .main-header-background{
+      background: url(../images/image_bg.png) no-repeat center/cover;
+      height: 15rem;
+      .main-header-head{
+        @include relative(4rem,unset,unset,2rem);
+        background: $white;
+        @include border(radius,50%);
+        @include wh(7rem,7rem);
+        overflow: hidden;
+        img{
+          @include relative(unset,1.7rem,1rem,unset);
+          @include wh(10.5rem,10.5rem);
+        }
+      }
+      .main-header-info{
+        @include relative(unset,unset,2.5rem,13rem);
+        .font-size1{
+          font-size: 1.8rem;
+          line-height: .1rem;
+        }
+        .font-size2{
+          background: url(../images/images_dz.png) no-repeat left 1px/1rem;
+          font-size: 1.3rem;
+          padding:0 0 0 1.5rem;
+        }
+      }
+    }
+  }
+  .main-content{
+    $light-gray: #cccccc;
+    %line-height{line-height: 1rem;}
+    %inline-block{display: inline-block;}
+    .main-list-frame{
+      position: relative;
+      margin:0 1rem;
+      @include border(bottom,.1rem solid $light-gray);
+      color: #000;
+      line-height: 4rem;
+      .title{
+        >span{
+          @include border(left,4px solid $cyan);
+          padding:0 0 0 .5rem;
+        }
+      }
+      .main-list1{
+        @extend %inline-block;
+        background: url(../images/images-xx_03.png)  no-repeat left center/1.3rem;
+        padding:0 0 0 1.5rem;
+      }
+      .main-list2-4-left{
+        @extend %inline-block;
+        color: #aaaaaa;
+        padding: 0.5rem 1rem 0.5rem 0;
+        @include border(right,.1rem solid $light-gray);
+        @extend %line-height;
+      }
+      .main-list2-4-right {
+        @extend %inline-block;
+        padding-left:0.5rem;
+        @extend %line-height;
+      }
+      .main-list2-4-right-red{color: #CC3333;}
+      .main-list2-4-left-paragraph {
+        @extend %inline-block;
+        position: absolute;
+        top:50%;
+        color: #aaaaaa;
+        padding:.5rem 1rem .5rem 0;
+        @include border(right,.1rem solid $light-gray);
+        @extend %line-height;
+        @include transform(-50%);
+      }
+      .main-list2-4-right-paragraph{
+        @extend %inline-block;
+        padding:.9rem 0 .5rem 6.8rem;
+        line-height: 2rem;
+      }
+    }
+  }
+}
+%footer{
+  @include fixed(unset,0,0,0);
+  z-index: 1;
+}
+.assistant footer{
+  @extend %footer;
+  height:6.1rem;
+  background: #f8fafb;
+  @include border(top,1px solid #e1e5e7);
+  .footer-home{
+    margin:1rem 0 0 22%;
+    padding:0.8rem 2rem 2.5rem 0;
+    background: url("../images/sprite.png") no-repeat 2px 71.5%/29px;
+    span{
+      @include relative(2.2rem,unset,unset,6px);
+      font-size: 1rem;
+      color: $cyan;
+    }
+  }
+  .footer-edit{
+    display: inline-block;
+    @include fixed(unset,unset,1px,50%);
+    background: $cyan url("../images/sprite.png") no-repeat 17px -27px/29px;
+    @include border(radius,50%);
+    margin-left: -27px;
+    padding: 2.9rem;
+  }
+  .footer-person{
+    display: inline-block;
+    @include fixed(unset,0,unset,unset);
+    margin: 1rem 22% 0 0 ;
+    padding:0.8rem 2rem 2.5rem 0;
+    background: url("../images/sprite.png") no-repeat 6px -345px/29px;
+    span{
+      position: relative;
+      top: 2.2rem;
+      left: 8px;
+      color: $gray;
+      font-size: 1rem;
+    }
+  }
+  button{ @extend %rim;;}
+
+}
+@mixin box-shadow($value...){
+  -webkit-box-shadow: $value;
+  -moz-box-shadow: $value;
+  box-shadow: $value;
+}
+.index footer{
+  @extend %footer;
+  padding: 1.5rem;
+  background: $white;
+  text-align: center;
+  .button-left {
+    position: relative;
+    background:$white;
+    @include box-shadow(inset 0 0 0 2px $cyan);
+    @include wh(49%,3.5rem);
+    @include border(radius,5px);
+    font-size: 1.8rem;
+    color: $cyan;
+    @extend %rim;
+  }
+  .button-right {
+    position: relative;
+    background: $cyan;
+    @include wh(49%,3.5rem);
+    @include border(radius,5px);
+    font-size: 1.8rem;
+    color: $white;
+    @extend %rim;
+  }
+}

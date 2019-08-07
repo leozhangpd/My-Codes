@@ -1,0 +1,30 @@
+html {
+  font-size: 62.5%; }
+
+body {
+  margin: 0;
+  background-color: aliceblue; }
+
+header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  background: #5bb7c3;
+  padding: 2rem 1.3rem;
+  height: 0.6rem;
+  font-size: 1rem;
+  color: white; }
+  header a {
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: white;
+    line-height: 1rem; }
+  header h2 {
+    margin: 0 0;
+    font-size: 1.6rem;
+    text-align: center;
+    line-height: 1.3rem; }
+
+/*# sourceMappingURL=login.css.map */

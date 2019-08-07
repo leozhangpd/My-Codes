@@ -1,0 +1,174 @@
+html{
+    font-size: calc(10px);
+}
+body{
+    margin:0;
+    padding:0;
+}
+html,body{
+    height:100%;
+}
+header{
+    position: fixed;
+    left:0;
+    right:0;
+    top:0;
+    height:4rem;
+    background: #5fc0cd;
+    line-height:4rem;
+    text-align: center;
+    z-index: 1;
+}
+header a {
+    position: absolute;
+    color: #ffffff;
+    text-decoration: none;
+    left:1rem;
+}
+big{
+    font-size: 2rem;
+}
+header h2{
+    display: inline-block;
+    color: #ffffff;
+    margin:0 auto;
+    padding:0;
+    font-size: 1.6rem;
+}
+main{
+    position: absolute;
+    top:4rem;
+    left:0;
+    right:0;
+    bottom:7.8rem;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.content{/*main-header*/
+    font-size: 1.2rem;
+    color:#ffff;
+}
+.main-background{
+    background:url(images/image_bg.png);
+    background-repeat: no-repeat;
+    background-size:cover;/*相同点：图片都是等比例缩放,不同点：cover是铺满整个显示区域。如果显示比例和显示区域的比例相差很大某些部分会不显示*/
+    height:15rem;
+    background-position: center;
+}
+.main-head{
+    position: relative;
+    background: #ffffff;
+    border-radius:50%;
+    width:7rem;
+    height:7rem;
+    overflow: hidden;
+    left:2rem;
+    top:4rem;
+}
+.main-head img{
+    position: relative;
+    bottom:1rem;
+    right:1.7rem;
+    width:10.5rem;
+    height:10.5rem;
+}
+.main-info{
+    position: relative;
+    left:13rem;
+    bottom:2.5rem;
+}
+.font-size1{
+    font-size: 1.8rem;
+    line-height: 0.1rem;
+}
+.font-size2{
+    background: url(images/images_dz.png) no-repeat left;
+    background-size: 1rem;
+    font-size: 1.3rem;
+    padding:0 0 0 1.5rem;
+}
+.main-content{
+    left:0;
+    right:0;
+}
+.main-list-frame{
+    position: relative;
+    margin:0 1rem;
+    border-bottom: 0.1rem solid #cccccc;
+    color: #000;
+    line-height: 4rem;
+}
+.title{}
+.title>span{
+    border-left: 4px solid #5fc0cd;
+    padding:0 0 0 0.5rem;
+}
+.main-list1{
+    display: inline-block;
+    background: url(images/images-xx_03.png)  no-repeat left center;
+    background-size: 1.3rem;
+    padding:0 0 0 1.5rem;
+}
+.main-list2-4-left{
+    display: inline-block;
+    color: #aaaaaa;
+    padding: 0.5rem 1rem 0.5rem 0;
+    border-right:0.1rem solid #cccccc;
+    line-height: 1rem;
+}
+.main-list2-4-right {
+    display: inline-block;
+    padding-left:0.5rem;
+    line-height: 1rem;
+}
+.main-list2-4-right-red {
+    color: #CC3333;
+}
+.main-list2-4-left-paragraph {
+    position: absolute;
+    top: 50%;
+    display: inline-block;
+    color: #aaaaaa;
+    padding: 0.5rem 1rem 0.5rem 0;
+    border-right:0.1rem solid #cccccc;
+    line-height: 1rem;
+    transform: translateY(-50%);
+}
+.main-list2-4-right-paragraph {
+    display: inline-block;
+    padding:.9rem 0 .5rem 6.8rem;
+    line-height: 2rem;
+}
+.button-left {
+    position: relative;
+    background:#ffffff;
+    border: none;
+    box-shadow: inset 0 0 0 2px #5fc0cd;
+    height:3.5rem;
+    width:49%;
+    border-radius: 5px;
+    font-size: 1.8rem;
+    color: #5fc0cd;
+    outline: none;
+}
+.button-right {
+    position: relative;
+    background:#5fc0cd;
+    border: none;
+    height:3.5rem;
+    width:49%;
+    border-radius: 5px;
+    font-size: 1.8rem;
+    color: #ffffff;
+    outline: none;
+}
+footer {
+    position: fixed;
+    bottom: 0;
+    right:0;
+    left: 0;
+    padding:1.5rem;
+    z-index: 1;
+    background: #ffffff;
+    text-align: center;
+}
