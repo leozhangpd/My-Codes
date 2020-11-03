@@ -6,7 +6,6 @@
     // console.log(div);
     var round;//循环函数
     var click = false;//防止重复点击
-    var rgb;
     /*复原颜色*/
     function clears() {
         for(var i=0;i<9;i++){
@@ -14,21 +13,22 @@
         }
     }
     /*随机出现三种颜色的具体代码*/
-    function roa(grids,temp) {
+    function roa() {
         /*随机数字*/
-        grids = [0,1,2,3,4,5,6,7,8];//元素中的任意三个元素赋给div数组和方便数字去重
+        var grids = [0,1,2,3,4,5,6,7,8];//元素中的任意三个元素赋给div数组和方便数字去重
         clears();//复原颜色，要放在填充颜色代码之前才行，否则刚生成的随机颜色就被清除了
         for (var i=0;i<3;i++){
             var x = Math.floor(Math.random()*grids.length);//数组grids的随机下标
-            grids.splice(x,1);//该方法的第一个参数是按照数组下标来定位的，第二个参数是删除具体数量，删除点从定位好的那个下标点开始删。该行代码的作用是删除用过的数字，以防止出现相同的数字导致显示颜色的格子数量不全。
         /*随机rgb颜色*/
             var r = Math.floor(Math.random() * 256);
             var g = Math.floor(Math.random() * 256);
             var b = Math.floor(Math.random() * 256);
-            rgb = "rgb" + "("+r+","+g+","+b+")";
+            var rgb = "rgb" + "("+r+","+g+","+b+")";
         /*设置随机选择元素并填充随机颜色*/
             var n = grids[x];//数组grids中的元素赋给n，为之后的div当作下标
             div[n].style.background = rgb;
+        /*最后删除用过的数组元素，防止重复*/
+            grids.splice(x,1);//该方法的第一个参数是按照数组下标来定位的，第二个参数是删除具体数量，删除点从定位好的那个下标点开始删。该行代码的作用是删除用过的数字，以防止出现相同的数字导致显示颜色的格子数量不全。
         }
     }
     /*点击闪按钮后，按照指定的时间间隔进行循环播放*/
