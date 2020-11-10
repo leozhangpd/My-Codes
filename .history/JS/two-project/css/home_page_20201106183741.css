@@ -1,0 +1,107 @@
+html{
+    font-size: 62.5%;
+    background: #fff;
+    height: 100vh;
+}
+body{
+    height: 100%;
+    margin:0 auto;
+    padding-bottom: 4%;
+    max-width: 720px;
+    min-width: 320px;
+    background: #f0f0f0;
+}
+header{
+    padding: 3% 5%;
+    background-color: #29bde0;
+}
+header>button{
+    width: 4rem;;
+    background-color: rgba(0, 0, 0, 0);
+}
+header>button div{
+    margin-top: .5rem;
+    height: .3rem;
+    background-color: #fff;
+}
+main{
+    margin:0 6%;
+    width:88%;
+}
+.review{
+    padding:4% 0;
+    background: url("../images/home_page-2.png") no-repeat 97% 50%/5%;
+}
+.review>span{/*review__content*/
+    font-size: 18px;
+    color: #9a9a9a;
+}
+.review,.content{
+    background-color: #ffffff;
+    margin-top: 4%;
+    text-align: center;
+    border: 1px double #cecece;
+    letter-spacing: 3px;
+}
+.content{
+    position: relative;
+}
+.title{/*content__title*/
+    padding:3% 0;
+    font-size: 19px;
+    color: #fbb435;
+    border-bottom: 0.2rem solid #fdd793;
+}
+#slider{
+    white-space: nowrap;
+    overflow: hidden;
+}
+.list{
+    display: inline-block;
+    width: 100%;
+    transition: all .5s;
+}
+.list>li{/*content__option*/
+    margin: 4% 8% 0 8%;
+}
+.list>li:nth-child(odd){/*option__btn*/
+    background: #69d1e9;
+    font-size: 18px;
+    color: #fff;
+}
+.list>li:nth-child(odd)>a{
+    display: block;
+    padding:6% 0;
+}
+.list>li:nth-child(even){/*option__hint*/
+    color: #787878;
+}
+input{display: none;}
+#change-1:checked ~ #slider>ul:nth-child(1){margin-left: 0;}
+#change-2:checked ~ #slider>ul:nth-child(1){margin-left: -101%;}
+.page>label{/*page__dot*/
+    display: inline-block;
+    transition: all .2s;
+}
+.page>label:hover,
+#change-1:checked ~ .page>:nth-child(1),
+#change-2:checked ~ .page>:nth-child(2){
+    background: #2e2bda;
+}
+.arrow>label{
+    position: absolute;
+    top: 51%;
+    border-style:solid;
+}
+.arrow>label:nth-child(1){
+    left: 2%;
+    border-width:15px 15px 15px 0;
+    border-color:transparent #fbb435 transparent transparent;/*透明 透明 透明 橘*/
+}
+.arrow>label:nth-child(2){
+    right: 2%;
+    border-width:15px 0 15px 15px;
+    border-color:transparent transparent transparent #fbb435;/*透明 透明 透明 橘*/
+}
+#change-1:checked ~ .arrow>:nth-child(1){display: none;transition: 0s 1s;}
+#change-2:checked ~ .arrow>:nth-child(2){display: none;transition: 0s .1s;}

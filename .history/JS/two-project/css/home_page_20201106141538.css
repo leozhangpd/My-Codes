@@ -1,0 +1,99 @@
+ul{list-style-type: none;margin: 0;padding: 0;}
+button{outline: none;border:none;}
+a:link,a:visited,a:hover,a:active {text-decoration:none;color: #fff;}
+html{
+    font-size: 62.5%;
+    background: #fff;
+    height: 100%;
+}
+body{
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin:0 auto;
+    max-width: 720px;
+    min-width: 320px;
+    background: #f0f0f0;
+    overflow: auto;
+}
+header{
+    padding: 3% 5%;
+    background-color: #29bde0;
+}
+header>button{
+    width: 4rem;;
+    background-color: rgba(0, 0, 0, 0);
+}
+header>button div{
+    margin-top: .5rem;
+    height: .3rem;
+    background-color: #fff;
+}
+main{
+    margin:0 6%;
+    width:88%;
+}
+.review{
+    padding:4% 0;
+    background: url("../images/home_page-2.png") no-repeat 97% 50%/5%;
+}
+.review>span{/*review__content*/
+    font-size: 18px;
+    color: #9a9a9a;
+}
+.review,.content{
+    background-color: #ffffff;
+    margin-top: 4%;
+    text-align: center;
+    border: 1px double #cecece;
+    letter-spacing: 3px;
+}
+.content{
+    position: relative;
+}
+.title{/*content__title*/
+    padding:3% 0;
+    font-size: 19px;
+    color: #fbb435;
+    border-bottom: 0.2rem solid #fdd793;
+}
+.list>li{/*content__option*/
+    margin: 4% 8% 0 8%;
+}
+.list>li:nth-child(odd){/*option__btn*/
+    background: #69d1e9;
+    font-size: 18px;
+    color: #fff;
+}
+.list>li:nth-child(odd)>a{
+    display: block;
+    padding:6% 0;
+}
+.list>li:nth-child(3):after{/*option__btn--arrows*/
+    display: inline-block;
+    content: ' ';
+    position: absolute;
+    right: 1%;
+    border-width:15px 0 15px 15px;
+    border-style:solid;
+    border-color:transparent transparent transparent #fbb435;/*透明 透明 透明 橘*/
+}
+.list>li:nth-child(even){/*option__hint*/
+    color: #787878;
+}
+input{display: none;}
+.page>label{/*page__dot*/
+    display: inline-block;
+    margin: 2% 0 2% -1px;
+    padding-top: 2.5%;
+    width:2.5%;
+    background: #69d1e9;
+    border-radius: 50%;
+
+}
+.arrow>label{
+    border-width:15px 0 15px 15px;
+
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+    <link rel="stylesheet" href="css/home_page.css" type="text/css" >
+    <script type="text/javascript" src="js/home-page.js" defer=></script>
+    <title>版本选择</title>
+    <!-- 该style是在页面开始解析时优先渲染style里的样式。
+    如果不这样，则页面解析到某个节点时，先在节点上渲染默认样式，
+    再读取外联css文件里的样式进行渲染，页面会抖动，在某个节点上做过渡动画时尤为明显 -->
+    <style>
+        ul{
+            list-style-type: none;
+            margin: 0;padding: 0;
+        }
+        button{
+            outline: none;
+            border:none;
+        }
+        html{font-size: 62.5%;}
+        a:link,a:visited,a:hover,a:active {
+            text-decoration:none;
+            color: #fff;
+        }
+        .review,.content{
+            letter-spacing: 3px;
+        }
+        .title{
+            font-size: 19px;
+            color: #fbb435;
+        }
+        .page>label{
+            padding-top: 12px;
+            width:12px;
+            background: #69d1e9;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <button>
+            <div></div>
+            <div></div>
+            <div></div>
+        </button>
+    </header>
+    <main>
+        <div class="review">
+            <span>上次游戏：捉鬼猜词版</span>
+        </div>
+        <div class="content" style="overflow: hidden;">
+            <input type="radio" name="change" id="change-1" checked>
+            <input type="radio" name="change" id="change-2">
+
+            <div id="slider">
+                <ul class="list">
+                    <li class="title">
+                        <span>捉鬼游戏</span>
+                    </li>
+                    <li><button class="btn" id="btn1">简化版</button></li>
+                    <li class="text">有1133个用户正在玩此款游戏</li>
+                    <li><button class="btn">
+                            猜词版
+                        </button>
+                    </li>
+                    <li class="text">有1236个用户正在玩此款游戏</li>
+                    <li><button class="btn">白痴版</button></li>
+                    <li class="text">有9999个用户正在玩此款游戏</li>
+                </ul>
+                <ul class="list" id="out">
+                    <li class="title">
+                        <span>杀人游戏</span>
+                    </li>
+                    <li><button class="btn">简化版</button></li>
+                    <li class="text">有1113个用户正在玩此款游戏</li>
+                    <li><button class="btn">警版</button></li>
+                    <li class="text">有1636个用户正在玩此款游戏</li>
+                    <li><button class="btn">3.0 版</button></li>
+                    <li class="text">有9698个用户正在玩此款游戏</li>
+                </ul>
+            </div>
+            <div class="arrow">
+                <label for="change-1"></label><!--在轮播页2隐藏，在轮播页1显示，该元素指向轮播页2-->
+                <label for="change-2"></label><!--在轮播页1隐藏，在轮播页2显示，该元素指向轮播页1-->
+                <label for="change-1"></label><!--在轮播页2隐藏，在轮播页1显示，该元素指向轮播页2-->
+                <label for="change-2"></label><!--在轮播页1隐藏，在轮播页2显示，该元素指向轮播页1-->
+            </div>
+            <div class="page">
+                <label for="change-1"></label>
+                <label for="change-2"></label>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

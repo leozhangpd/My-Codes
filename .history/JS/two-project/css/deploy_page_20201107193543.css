@@ -1,0 +1,32 @@
+html{
+    font-size: 62.5%;
+    background: #fff;
+    height: 100vh;
+}
+body{
+    height: 100%;
+    margin:0 auto;
+    padding-bottom: 4%;
+    max-width: 720px;
+    min-width: 320px;
+    background: #f0f0f0;
+}
+header{
+    padding: 3% 5%;
+    background-color: #29bde0;
+}
+header>a{
+    display: inline-block;
+    padding: 10px;
+    box-shadow: inset 4px -4px 0 0 #ffffff;
+    transform: rotate();
+}
+header>button div{
+    margin-top: .5rem;
+    height: .3rem;
+    background-color: #fff;
+}
+main{
+    margin:0 6%;
+    width:88%;
+}

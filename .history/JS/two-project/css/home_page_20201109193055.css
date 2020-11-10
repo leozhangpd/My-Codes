@@ -1,0 +1,129 @@
+html{
+    font-size: 62.5%;
+    background: #fff;
+    height: 100vh;
+}
+body{
+    height: 100%;
+    margin:0 auto;
+    padding-bottom: 4%;
+    max-width: 720px;
+    min-width: 320px;
+    background: #f0f0f0;
+}
+header{
+    padding: 3% 5% 3% 1.5%;
+    background-color: #29bde0;
+}
+header>button{
+    width: 4rem;;
+    background-color: rgba(0, 0, 0, 0);
+}
+header>button div{
+    margin-top: .5rem;
+    height: .3rem;
+    background-color: #fff;
+}
+main{
+    margin:0 auto;
+    width:96%;
+}
+.review{
+    padding:4% 0;
+    background: url("../images/home_page-2.png") no-repeat 97% 50%/5%;
+}
+.review>span{/*review__content*/
+    font-size: 18px;
+    color: #9a9a9a;
+}
+.review,.content{
+    background-color: #ffffff;
+    margin-top: 4%;
+    text-align: center;
+    border: 1px double #cecece;
+    letter-spacing: 3px;
+}
+.content{
+    position: relative;
+}
+.title{/*content__title*/
+    display: block;
+    padding:3% 0;
+    border-bottom: 0.2rem solid #fdd793;
+
+}
+.title>span{transition: all .5s;}
+.title>span:nth-child(1){
+    position: relative;
+    left: 7.5%;
+}
+#slider{
+    white-space: nowrap;
+    overflow: hidden;
+}
+.list{
+    display: inline-block;
+    width: 100%;
+    transition: all .5s;
+}
+.list>li>.btn{/*content__option*/
+    margin: 4% 8% 0 8%;
+}
+.list>li>.btn{
+    display: block;
+    width: 84%;
+    padding:6% 0;
+    background: #69d1e9;
+    font-size: 18px;
+    color: #fff;
+    cursor: pointer;
+}
+.list>.text{/*option__hint*/
+    color: #787878;
+}
+input{display: none;}
+#change-1:checked ~ #slider>ul:nth-child(1){margin-left: 0;}
+#change-2:checked ~ #slider>ul:nth-child(1){margin-left: -102%;}
+.page>label{/*page__dot*/
+    display: inline-block;
+    transition: all .2s;
+}
+.page>label:hover,
+#change-1:checked ~ .page>:nth-child(1),
+#change-2:checked ~ .page>:nth-child(2){
+    background: #faf75e;
+}
+.arrow>label{
+    position: absolute;
+    bottom: 44%;
+    border-style:solid;
+    cursor: pointer;
+}
+.arrow>label:nth-child(1),
+.arrow>label:nth-child(2){
+    left: 2%;
+    border-width:12px 12px 13px 0;
+    border-color:transparent #fbb435 transparent transparent;/*透明 透明 透明 橘*/
+}
+.arrow>label:nth-child(3),
+.arrow>label:nth-child(4){
+    right: 2%;
+    border-width:12px 0 12px 13px;
+    border-color:transparent transparent transparent #fbb435;/*透明 透明 透明 橘*/
+}
+/*触发按钮1的时候，隐藏两个关联按钮1的label，此时页面显示的是按钮2的两个label*/
+#change-1:checked ~ .arrow>:nth-child(1),
+#change-1:checked ~ .arrow>:nth-child(3){
+    display: none;
+}
+/*触发按钮2的时候，隐藏两个关联按钮2的label，此时显示的是按钮1的两个label*/
+#change-2:checked ~ .arrow>:nth-child(2),
+#change-2:checked ~ .arrow>:nth-child(4){
+    display: none;
+}
+/*以上两个触发机制，就是在轮播页面A的时候，只能显示指向轮播页面B的按钮，
+不能显示有指向轮播页面A的按钮。具体流程是在一个轮播页面A上放置两个指向同一个轮播页面B的按钮，
+当触发任意按钮后，切换到轮播页面B后，隐藏指向轮播页面B的两个按钮，
+同时显示指向轮播页面A的两个按钮，以此类推，这样就产生了无论按哪个按钮都能切换*/
+/* #change-1:checked ~ .arrow>:nth-child(1){opacity:0;transition: 0s .5s;}
+#change-2:checked ~ .arrow>:nth-child(2){opacity:0;transition: 0s .5s;} */

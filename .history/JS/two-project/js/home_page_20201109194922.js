@@ -1,0 +1,1 @@
+var btn-1 = document.getElementById
