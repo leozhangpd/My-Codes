@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+    <title>九宫格</title>
+    <script type="text/javascript" src="script.js" defer="defer"></script>
+    <style type="text/css">
+        body{
+            margin:0 auto;
+            max-width:500px;
+            min-width:320px;
+        }
+        main{
+            width:100%;
+            padding-top: 4%;
+            padding-left:4%;
+        }
+        .block{
+            padding-right: 28%;
+            padding-bottom:28%;
+            margin-right : 4%;
+            margin-bottom: 4%;
+            float: left;
+            background: orange;
+            border-radius: 10%;
+        }
+        button{
+            display: block;
+            width:100%;
+            margin-bottom: 8px;
+            font-size: 16px;
+            color: orange;
+            background:white;
+            border-radius: 5px;
+            border: 1px solid orange;
+            outline: none;
+        }
+        button:hover{
+            color: #ffffff;
+            background: orange;}
+    </style>
+</head>
+<body>
+<main>
+    <div class="block"></div>
+    <div class="block"></div>
+    <div class="block"></div>
+    <div class="block"></div>
+    <div class="block"></div>
+    <div class="block"></div>
+    <div class="block"></div>
+    <div class="block"></div>
+    <div class="block"></div>
+    <div></div>
+</main>
+<footer>
+    <button id="btn1">开始闪</button>
+    <button id="btn2">结束闪</button>
+</footer>
+</body>
+</html>
