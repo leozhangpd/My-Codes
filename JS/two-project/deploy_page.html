@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+        <link rel="stylesheet" href="css/deploy_page.css" type="text/css">
+        <script type="text/javascript" src="js/deploy-page.js" defer="defer"></script>
+        <title>匹配</title>
+    </head>
+    <body>
+        <header>
+            <a href='home_page.html'></a>
+        </header>
+        <main>
+            <div class="title">玩家配比</div>
+            <ul class="list">
+                <li>
+                    <img src="images/wolf.png">
+                    <span id="wolf">杀手&nbsp;&nbsp;2&nbsp;&nbsp;人</span>
+                </li>
+                <li>
+                    <img id="footman" src="images/footman.png">
+                    <span>平民&nbsp;&nbsp;6&nbsp;&nbsp;人</span>
+                </li>
+            </ul>
+            <div class="work-group"></div>
+            <div class="player-number">
+                <span>请输入玩家数量</span>&nbsp;
+                <input type="text" maxlength="2" size="2" value="8" id="num" 
+                oninput="sum_num(value);";
+                onkeydown="value=value.replace(/[^\d]/g,'')";
+                onkeyup="value=value.replace(/[^\d]/g,'')";
+                >&nbsp;&nbsp;
+                <span>玩家数量为4-18</span>
+            </div>
+            <botton id="btn">去发牌</botton>
+        </main>
+        <footer></footer>
+    </body>
+</html>
