@@ -4,12 +4,12 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
         <link rel="stylesheet" href="css/deploy_page.css" type="text/css">
-        <script type="text/javascript" src="js/deploy-page.js" defer="defer"></script>
+        <script type="text/javascript" src="js/script.js" defer="defer"></script>
         <title>匹配</title>
     </head>
     <body>
         <header>
-            <a href='home_page.html'></a>
+            <button id="btn1" ></button>
         </header>
         <main>
             <div class="title">玩家配比</div>
@@ -19,8 +19,8 @@
                     <span id="wolf">杀手&nbsp;&nbsp;2&nbsp;&nbsp;人</span>
                 </li>
                 <li>
-                    <img id="footman" src="images/footman.png">
-                    <span>平民&nbsp;&nbsp;6&nbsp;&nbsp;人</span>
+                    <img src="images/footman.png">
+                    <span id="footman" >平民&nbsp;&nbsp;6&nbsp;&nbsp;人</span>
                 </li>
             </ul>
             <div class="work-group"></div>
@@ -28,12 +28,12 @@
                 <span>请输入玩家数量</span>&nbsp;
                 <input type="text" maxlength="2" size="2" value="8" id="num" 
                 oninput="sum_num(value);";
-                onkeydown="value=value.replace(/[^\d]/g,'')";
-                onkeyup="value=value.replace(/[^\d]/g,'')";
+                onkeydown="value=value.replace(/[\D]/g,'')";
+                onkeyup="value=value.replace(/[\D]/g,'')";
                 >&nbsp;&nbsp;
                 <span>玩家数量为4-18</span>
             </div>
-            <botton id="btn">去发牌</botton>
+            <botton id="btn2">去发牌</botton>
         </main>
         <footer></footer>
     </body>

@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
     <link rel="stylesheet" href="css/home_page.css" type="text/css" >
-    <script type="text/javascript" src="js/home-page.js" defer="defer"></script>
     <title>版本选择</title>
     <!-- 该style是在页面开始解析时优先渲染style里的样式。
     如果不这样，则页面解析到某个节点时，先在节点上渲染默认样式，
@@ -93,5 +92,11 @@
             </div>
         </div>
     </main>
+    <script>
+        var btn1 = document.getElementById("btn1");
+        btn1.onclick = function (){
+            window.location.href = "deploy_page.html";
+        }
+    </script>
 </body>
 </html>
