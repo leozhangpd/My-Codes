@@ -81,7 +81,8 @@ main>*{background-color: #fff;}
     height: 2.5rem;
     text-align: center;
     background-color: rgb(241, 241, 241);
-    border: none;
+    border: 0px;
+    outline: none;
 }
 .player-number>input,
 .player-number>span:nth-of-type(2){
