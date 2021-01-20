@@ -40,13 +40,28 @@
     <div class="kuai"></div>
     <div class="kuai"></div>
 </div>
+<input id="btn" type="button" value="click"/>
 <script>
-        for (var i = 0; i < 6; i++){
+/*        for (var i = 0; i < 6; i++){
             for (var j = 0; j < 3; j++){
                 if (i === 1 || j === 1) continue;
                 console.log('i=' + i + ', j=' + j);
             }
-        }
-</script>
+        }*/
+/*    var a = document.getElementsByClassName('kuai');
+    for (var i=0;i<a.length;i++){
+        a[i].innerHTML = '<span></span>';
+        var b = document.getElementsByTagName('span');
+        b[i].innerHTML = i+1;
+    }
+    if (alert(1)){
+        alert('yes');
+    }*/
+/* var a = document.getElementById('btn');
+ a.onclick = function (event) {
+     console.log(event.target);
+ }*/
+var a = document.getElementById("op");
+console.log(a.textContent);</script>
 </body>
 </html>

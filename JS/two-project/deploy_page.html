@@ -4,7 +4,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
         <link rel="stylesheet" href="css/deploy_page.css" type="text/css">
-        <script type="text/javascript" src="js/script.js" defer="defer"></script>
+        <script type="text/javascript" src="../jquery-3.5.1.js"></script>
+        <script type="text/javascript" src="js/script-jquery.js" defer="defer"></script>
         <title>匹配</title>
     </head>
     <body>
@@ -12,7 +13,7 @@
             <button id="btn1" ></button>
         </header>
         <main>
-            <div class="title">玩家配比</div>
+            <div class="green red title">玩家配比</div>
             <ul class="list">
                 <li>
                     <img src="images/wolf.png" alt="killer">
@@ -23,7 +24,7 @@
                     <span id="footman" >平民&nbsp;&nbsp;6&nbsp;&nbsp;人</span>
                 </li>
             </ul>
-            <div class="work-group"></div>
+            <div class="red work-group green"></div>
             <div class="player-number">
                 <span>请输入玩家数量</span>&nbsp;
                 <input type="text" maxlength="2" size="2" value="8" id="num" 
@@ -32,9 +33,17 @@
                 onkeyup="value=value.replace(/[\D]/g,'')";
                 >&nbsp;&nbsp;
                 <span>玩家数量为4-18</span>
-            </div>
-            <botton id="btn2">去发牌</botton>
+            </div>   
         </main>
-        <footer></footer>
+        <footer>
+            <botton id="btn2" >去发牌</botton>
+            <!-- <input type="image" id="img" src="images/wolf.png" value="yy">
+            <input type="radio" id="rad" name="a" value="a" checked>
+            <input type="radio" id="rad1" name="a" value="b">
+            <input type="text" id="pwd" value="pwd" onchange="console.log('9898');">
+            <input type="checkbox" name="lang" value="cbx1" >
+            <input type="checkbox" name="lang" value="cbx2" >
+            <input type="checkbox" name="lang" value="cbx3" > -->
+        </footer>
     </body>
 </html>

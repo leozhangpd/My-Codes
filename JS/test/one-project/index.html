@@ -3,61 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
-    <title>九宫格</title>
-    <script type="text/javascript" src="script.js">
-    </script>
-    <style type="text/css">
+    <title>复盘：九宫格</title>
+    <script type="text/javascript" src="script.js"></script>
+    <style>
         body{
-            margin:0 auto;
-            max-width:500px;
-            min-width:320px;
+            max-width: 500px;
+            min-width: 320px;
         }
-        main{
-            width:100%;
-            padding-top: 4%;
-            padding-left:4%;
-        }
-        .block{
-            padding-right: 28%;
-            padding-bottom:28%;
-            margin-right : 4%;
-            margin-bottom: 4%;
+        .jgg{
+            padding: 0 30% 30% 0;
+            margin: 0 3% 3% 0;
             float: left;
             background: orange;
-            border-radius: 10%;
+            border-radius: 20%;
         }
-        button{
+        main{margin-left: 5%;}
+        #btn1,#btn2{
             display: block;
-            width:100%;
-            margin-bottom: 8px;
-            font-size: 16px;
+            width: 100%;
+            padding: 3% 0;
+            margin: 0 auto 3% auto;
+            background: white;
+            font-size: 15px;
             color: orange;
-            background:white;
             border-radius: 5px;
             border: 1px solid orange;
             outline: none;
         }
-        button:hover{
-            color: #ffffff;
-            background: orange;}
+        #btn1:hover,
+        #btn2:hover{
+            color: white;
+            background: orange;
+        }
     </style>
 </head>
 <body>
 <main>
-    <div id="text">测试</div>
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
+    <div class="jgg"></div>
+    <div class="jgg"></div>
+    <div class="jgg"></div>
+    <div class="jgg"></div>
+    <div class="jgg"></div>
+    <div class="jgg"></div>
+    <div class="jgg"></div>
+    <div class="jgg"></div>
+    <div class="jgg"></div>
 </main>
 <footer>
-    <button id="btn1">开始闪</button>
-    <button id="btn2">结束闪</button>
+    <input id="btn1" type="button" value="开始闪">
+    <input id="btn2" type="button" value="结束闪">
 </footer>
 </body>
 </html>

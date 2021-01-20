@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+        <link rel="stylesheet" type="text/css" href="css/base.css">
+        <link rel="stylesheet" type="text/css" href="css/show_id.css" >
+        <script type="text/javascript" src="../jquery-3.5.1.js"></script>
+        <script type="text/javascript" src="js/show_id.js" defer="defer"></script>
+        <title>查看身份</title>
+    </head>
+    <body>
+        <header>
+            <button id="btn1" ></button>
+            <span id="title1">查看身份</span>
+            <span id="title2">法官日记</span>
+            <button id="btn2"></button>
+        </header>
+        <main>
+            <div id="main-bg">
+                <span id="bg-title">1</span>
+                <img id="bg-img1" src="images/judge.png">
+                <span id="bg-img2">
+                    <img src="images/status.png">
+                    <span id="img2-text">平民</span>
+                </span>
+            </div>
+            <div id="fe">
+                <ul class="main-vote"><!--js切换用，显示的时候用inline-block-->
+                    <li class="vote-status">平民</li>
+                    <li><span class="vote-num">1</span>号</li>
+                </ul>
+            </div>
+        </main>
+        <footer>
+            <botton id="footer-btn">查看1号身份</botton>
+        </footer>
+    </body>
+</html>
