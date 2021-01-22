@@ -16,12 +16,23 @@ header{border-bottom:2px solid #61cae1;}
 #btn2::before{transform: rotate(45deg) translate(1px, -1px);}
 #btn2::after{transform: rotate(-45deg) translate(-1px, -1px);}
 #title2{display: none;}/*js切换用*/
-main{margin-top: 4rem;}
+main{
+    position: absolute;
+    top: 6.5rem;
+    bottom: 0px;
+    overflow: auto;
+    left: 0;
+    right: 0;
+    padding-top: 2rem;
+}
+main::-webkit-scrollbar {
+    width: 0px;
+}
 #main-bg{
     display: block;/*js切换用*/
     position: relative;
     width: 70%;
-    padding-top: 100%;
+    padding-top: 95%;
     margin: 0 auto;
     font-size: 2.1rem;
     text-align: center;
@@ -63,15 +74,6 @@ main{margin-top: 4rem;}
     display: block;
     color: #29bde0;
 }
-#fe{
-    position: absolute;
-    top: 8rem;
-    bottom: 10rem;
-    margin-top: 4rem;
-    overflow: auto;
-    left: 0;
-    right: 0;
-}
 .main-vote{
     width: 20.9%;
     margin: 3% 5% 8%;
@@ -102,7 +104,7 @@ footer{
     bottom: 0;
     text-align: center;
     background-color:  #29bde0;
-    padding-bottom: 5rem;
+    padding: 2rem 0;
 }
 #footer-btn{
     width: 80%;

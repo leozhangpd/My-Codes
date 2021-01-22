@@ -1,7 +1,7 @@
 ul{list-style-type: none;margin: 0px;padding: 0px;}
 button{padding: 0px; outline: none;border: none;background-color: unset;}
 html{
-    font-size: 62.5%;
+    font-size: 12px;
     background: #fff;
     height: 100vh;
 }
@@ -34,3 +34,4 @@ header{
     background: orange;
     cursor: pointer;
 }
+@media screen and (max-width: 320px){#footer-btn{font-size: 1.8rem;}}

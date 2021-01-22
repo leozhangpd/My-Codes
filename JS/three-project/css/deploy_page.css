@@ -68,14 +68,3 @@ main>*{background-color: #fff;}
     transform: scale(0.9);
 }
 .player-number>:nth-child(n+0){vertical-align: -6px;}
-#footer-btn{
-    display: inline-block;
-    width: 100%;
-    margin-top: 4px;
-    padding: 1.2rem 0;
-    text-align: center;
-    font-size: 2.8rem;
-    color: white;
-    background: orange;
-    cursor: pointer;
-}

@@ -15,13 +15,14 @@ var arrS = (function rtn() {//打乱顺序
     arr = (Array(killer)).fill('杀手');
     arrB = (Array(civilian)).fill('平民');
     arr.push.apply(arr,arrB); 
-    for (let i = arr.length-1;i>=0;i--){//在谷歌、ie最新版本、edge上经过测试后发现第二个表达式不写也没问题
+    for (let i = arr.length-1;i--;){//在谷歌、ie最新版本、edge上经过测试后发现第二个表达式不写也没问题
         let rand = ~~(Math.random() * (i+1));//i+1要括起来，i才是1，否则永远是随机数加上1
         let temp = arr[i];
         arr[i] = arr[rand];
         arr[rand] = temp;  
     }    
-    sessionStorage.arr = JSON.stringify(arr);
+    //sessionStorage.arr = JSON.stringify(arr);
+    sessionStorage.setItem("data",JSON.stringify(arr));
     //console.log(arr);
     return rtn;    
 })();
