@@ -1,0 +1,23 @@
+.main-vote{
+    width: 20.9%;
+    margin: 3% 5% 8%;
+    background-color: #f5c97b;
+    border: 1vw solid #fff;
+    text-align: center;
+}
+.main-vote{display: inline-block;}/*js切换用，显示的时候用inline-block*/
+.vote-status{
+    padding: 24% 5.6vw 0;
+    font-size: 4.4vw;
+}
+.main-vote>li:nth-child(2){
+    margin-top: 19%;
+    background-color: #83b09a;
+    font-size: 3.6vw;
+    color: #fff;
+}
+@media screen and (min-width: 700px){
+    .vote-status{font-size: 2.7rem;padding: 24% 0px 0;}
+    .main-vote{border: 7px solid #fff;}
+    .main-vote>li:nth-child(2){font-size: 26px;}
+}

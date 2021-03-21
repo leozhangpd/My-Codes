@@ -1,0 +1,119 @@
+ul,li{display:block;list-style-type: none;margin: 0;padding: 0;}
+button{outline: none;border:none;}
+html,body{height:100%;}
+a:link,a:visited,a:hover,a:active {text-decoration:none;color: #fff;}
+html{
+    font-size: calc(10px);
+}
+body{
+    position: relative;
+    margin: 0 auto;
+    padding:0;
+    max-width: 720px;
+    min-width: 320px;
+}
+.container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 7rem;
+    overflow: auto;
+}
+header,main{background-color: #29bde0;}
+header{
+    display: flex;
+    border-bottom: 1px solid #74d4eb;
+    padding: .6rem;
+}
+header span{   /*.header__content*/
+    display: inline-block;
+    flex: 1;
+    width:33%;
+    margin: 2%;
+    font-family: serif;;
+    font-size: 2rem;
+    color: #ffffff;
+    text-align: center;
+}
+.header-left,.header-right{
+    display: inline-block;
+    flex: 1;
+    width:33%;
+}
+.header-left{
+    background: url("../img/result-1.png") no-repeat 3% 46%/21%;
+}
+.header-right{
+    background: url("../img/result-2.png") no-repeat 96% 50%/19%;
+}
+.main-logo{
+    padding: 2rem 0;
+    text-align: center;
+}
+.main-logo>img{/*logo__img*/
+    padding:3% 0 0;
+    width: 56%;
+}
+.main-msg{
+    padding: 2% 12.2% 3%;
+    letter-spacing: .1rem;
+    text-align: justify;
+}
+.main-msg>li:nth-child(1){
+    color: #ffc865;
+    font-size: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+.main-msg>li:nth-child(1)~li{/*msg__content*/
+    display: flex;
+    font-size: 1.4rem;
+    color: #fff;
+    line-height: 130%;
+}
+.civilian-num{padding-left: 6rem;}
+.main-list{/*content__list*/
+    padding:1% 12% 1%;
+    background: #fff;
+    border-bottom:1px solid #a6a6a6;
+    color: #b2b2b2;
+}
+.main-list>li:nth-child(1){/*list__content*/
+    display: flex;
+}
+.main-list>li:nth-child(1)>span{/*content__item*/
+    flex: 1;
+    padding-bottom: 1.5%;
+    align-content: center;
+}
+.main-list>li>span:nth-child(1){/*content__item--left*/
+    font-size: 1.6rem;
+}
+.main-list>li~li{/*list__content--text*/
+    font-size: 1.3rem;
+    letter-spacing: .1rem;
+}
+footer{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 4% 0;
+    background-color: rgba(52,190,222,0.45);
+}
+.footer-button>button,.footer-button>a>button:nth-child(1){
+    width: 100%;
+    height: 100%;
+    margin: 0 4%;
+    border-radius: 0.5rem;
+}
+.footer-button{
+    width: 40%;
+    margin-left: 4%;
+    padding: 3% 0;
+    background: orange;
+    color: #fff;
+    border-radius: 0.5rem;
+}
+@media screen and (min-width: 500px){.footer-button,header span {font-size: 3rem;}}
+@media screen and (min-width: 720px){.footer-button,header span {font-size: 5rem;}}

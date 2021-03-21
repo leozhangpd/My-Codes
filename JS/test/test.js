@@ -472,17 +472,17 @@ console.timeEnd('getElementsByClassName');
 //var a = 666;
 //console.log(Object(a));
 
-class Parent {
-    /*static myMethod(msg) {  // 父类的方法之前加静态static关键字
+/* class Parent {
+    static myMethod(msg) {  // 父类的方法之前加静态static关键字
         console.log('static1', msg);
-    }*/
+    } 
 
     myMethod(msg) {            // 父类的私有普通方法
         console.log('instance2', msg);
     }
-}
+} */
 
-class Child extends Parent {  // 类child继承自篇Parent
+/* class Child extends Parent {  // 类child继承自篇Parent
     constructor() {    // 子类的私有myMethod方法前声明static
         super();
         //super.myMethod(msg); // super在静态方法中指向父类, 而不是父类的原型
@@ -491,9 +491,32 @@ class Child extends Parent {  // 类child继承自篇Parent
     myMethod(msg) {
         super.myMethod(msg); // super在普通方法中指向父类的原型
     }
-}
+} */
 
-Child.myMethod(1); // static1 1
+//Child.myMethod(1); // static1 1
 
 //var child = new Child();
 //child.myMethod(2); // instance2 2
+
+// function f1(cn){
+//     setTimeout(
+//         function(){
+//             for(var a=0;a<9999;a++){
+//                 console.log('f1:ok');
+//             };
+//             cn()
+//         },0
+//     )
+// }
+// function f2(){console.log('f2:ok');}
+// function f3(){console.log('f3:ok');}
+// f1(f2)
+// f3()
+
+var qq = 12;
+function rr(){
+    qq = 22;
+    console.log(123)
+    function wq(){}
+}
+rr()

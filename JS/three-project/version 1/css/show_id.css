@@ -1,0 +1,114 @@
+body{position: relative;padding-bottom: 0px; background-color: #29bde0;}
+header{border-bottom:2px solid #61cae1;}
+#btn1{
+    padding: 8px;
+    box-shadow: inset 4px -4px 0 0 #ffffff;
+    transform: rotate(45deg);
+    cursor: pointer;
+}
+#btn2::before,#btn2::after{
+    content: "";
+    display: inline-block;
+    width: 4px;
+    height: 27px;
+    background-color: #ffffff;
+}
+#btn2::before{transform: rotate(45deg) translate(1px, -1px);}
+#btn2::after{transform: rotate(-45deg) translate(-1px, -1px);}
+#title2{display: none;}/*js切换用*/
+main{
+    position: absolute;
+    top: 6.5rem;
+    bottom: 0px;
+    overflow-y: auto;
+    scrollbar-color: transparent transparent;
+    scrollbar-track-color: transparent;
+    -ms-scrollbar-track-color: transparent;
+    left: 0;
+    right: 0;
+    padding-top: 2rem;
+}
+main::-webkit-scrollbar {
+    width: 0px;
+}
+#main-bg{
+    display: block;/*js切换用*/
+    position: relative;
+    width: 70%;
+    padding-top: 95%;
+    margin: 0 auto;
+    font-size: 2.1rem;
+    text-align: center;
+    background-color: #ffedc5;
+    border: 4px solid #ffffff;
+}
+#bg-title{
+    position: absolute;
+    top: -2rem;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 3rem;
+    height: 3rem;
+    color: #f56b81;
+    font-weight: 500;
+    background-color: #ffffff;
+    border-radius: 50%;
+    border: 2px solid #ffedc5;
+}
+#bg-img1{
+    display: block;/*js切换用*/
+    float: left;
+    margin-left: 15%;
+    width: 70%;
+    transform: translateY(-150%);
+}
+#bg-img2{
+    display: none;/*js切换用*/
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 40px;
+}
+#bg-img2>img{
+    width: 54%;
+}
+#img2-text{
+    display: block;
+    color: #29bde0;
+}
+.main-vote{
+    width: 20.9%;
+    margin: 3% 5% 8%;
+    background-color: #f5c97b;
+    border: 1vw solid #fff;
+    text-align: center;
+}
+.main-vote{display: none;}/*js切换用，显示的时候用inline-block*/
+.vote-status{
+    padding: 24% 5.6vw 0;
+    font-size: 4.4vw;
+}
+.main-vote>li:nth-child(2){
+    margin-top: 19%;
+    background-color: #83b09a;
+    font-size: 3.6vw;
+    color: #fff;
+}
+@media screen and (min-width: 700px){
+    .vote-status{font-size: 2.7rem;padding: 24% 0px 0;}
+    .main-vote{border: 7px solid #fff;}
+    .main-vote>li:nth-child(2){font-size: 26px;}
+}
+footer{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    background-color:  #29bde0;
+    padding: 2rem 0;
+}
+#footer-btn{
+    width: 80%;
+}
